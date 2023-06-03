@@ -1,12 +1,16 @@
 import { Avatar } from './Avatar';
-import { Menu } from './Menu';
+import TypingEffect from './TypingEffect';
 import './styles/JhcLanding.scss'
 
 function JhcLanding() {
     return (
         <div className="home-container">
-            <Avatar />
-            <Menu />
+            <div className="avatar">
+                <Avatar />
+            </div>
+            <div className="typing">
+                <TypingEffect />
+            </div>
         </div>
     )
 }

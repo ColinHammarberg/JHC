@@ -1,7 +1,17 @@
 .home-container {
     background-color: #000000;
     height: 100vh;
-    display: flex;
+    width: 100%;
+    display: inline-grid;
     align-items: center;
     justify-content: center;
+
+    .avatar {
+        margin-bottom: -150px;
+    }
+
+    .typing {
+        margin-top: -200px;
+        text-align: center;
+    }
 }
