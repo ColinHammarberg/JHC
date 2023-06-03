@@ -1,5 +1,4 @@
-import { JhcLanding } from "./components/Home";
-
+import JhcLanding from './components/JhcLanding';
 function App() {
   return (
     <div className="App">
