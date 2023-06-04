@@ -21,7 +21,7 @@ const TypingEffect = () => {
           if (subIndex < subText.length) {
             subTextRef.current.textContent = subText.slice(0, subIndex + 1);
             subIndex++;
-            setTimeout(typeSubText, 200); // Adjust the typing speed here (in milliseconds)
+            setTimeout(typeSubText, 150); // Adjust the typing speed here (in milliseconds)
           }
         };
         typeSubText();
