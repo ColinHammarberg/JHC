@@ -7,8 +7,10 @@ import Fellowmind from '../images/Fellowmind.png';
 import Vattenfall from '../images/Vattenfall.png';
 import Spce from '../images/SPCE.png';
 import { JhcButton } from './Buttons';
+import { useNavigate } from 'react-router-dom';
 
-export const ProblemUtilization = () => {
+export const Welcome = () => {
+    const navigate = useNavigate();
     const Images = [
         {
             key: 1,
@@ -27,6 +29,9 @@ export const ProblemUtilization = () => {
             source: Spce
         },
     ]
+    function handleOnClick() {
+        navigate('/utalization');
+    }
     return (
         <div className="problem-utilization">
             <div className="content">
@@ -44,7 +49,7 @@ export const ProblemUtilization = () => {
                     })}
                 </div>
                 <div className="redirect-btn">
-                    <JhcButton label="Enter Site" />
+                    <JhcButton onClick={handleOnClick} label="Enter Site" />
                 </div>
             </div>
         </div>

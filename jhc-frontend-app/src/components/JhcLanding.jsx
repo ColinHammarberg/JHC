@@ -29,7 +29,7 @@ function JhcLanding() {
     }, 9000);
 
     const timeoutRedirect = setTimeout(() => {
-      navigate('/problems');
+      navigate('/welcome');
     }, 14000);
 
     return () => {

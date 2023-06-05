@@ -25,11 +25,13 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
+            animation: floatIn 1s ease-in-out;
         }
 
         .description {
             font-size: 15px;
             font-family: 'MediumLLWeb-Regular';
+            animation: floatIn 2s ease-in-out;
         }
 
         .showcase {
@@ -38,12 +40,14 @@
             align-items: center;
             justify-content: center;
             margin-top: 20px;
+            animation: floatIn 3s ease-in-out;
         }
         .redirect-btn {
             align-items: center;
             justify-content: center;
             display: flex;
             margin-top: 20px;
+            animation: floatIn 4s ease-in-out;
         }
     }
 }

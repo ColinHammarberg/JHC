@@ -1,6 +1,7 @@
 import JhcLanding from './components/JhcLanding';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { ProblemUtilization } from './components/ProblemUtilization';
+import { Welcome } from './components/Welcome';
+import { Utalization } from './components/Utilization';
 
 function App() {
   console.log("app", process.env.REACT_APP_BASEURL);
@@ -13,8 +14,12 @@ function App() {
               element={<JhcLanding />}
             />
           <Route
-            path={`/problems`}
-            element={<ProblemUtilization />}
+            path={`/welcome`}
+            element={<Welcome />}
+          />
+          <Route
+            path={`/utalization`}
+            element={<Utalization />}
           />
         </Routes>
       </BrowserRouter>
