@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar } from './Avatar';
-import './styles/ProblemUtilization.scss';
+import './styles/Welcome.scss';
 import { ShowcaseCompany } from './ShowcaseCompany';
 import Microsoft from '../images/Microsoft.png';
 import Fellowmind from '../images/Fellowmind.png';
@@ -33,7 +33,7 @@ export const Welcome = () => {
         navigate('/utalization');
     }
     return (
-        <div className="problem-utilization">
+        <div className="welcome">
             <div className="content">
                 <div className="avatar">
                     <Avatar />
