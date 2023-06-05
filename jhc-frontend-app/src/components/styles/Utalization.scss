@@ -17,6 +17,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    border-left: #D381F5 25px solid;
 
     .content {
         .avatar {
@@ -55,6 +56,7 @@
                 svg {
                     font-size: 80px;
                 }
+
                 &:hover {
                     color: #D381F5;
                 }
