@@ -25,6 +25,7 @@ export const ProblemAreas = (props) => {
             <IconButton onClick={handleOnClickUtalization} className={`${isActive && 'active'}`}>
                 {item.icon}
             </IconButton>
+            {item.title}
         </div>
     )
 }
