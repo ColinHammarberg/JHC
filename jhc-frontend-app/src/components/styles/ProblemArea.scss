@@ -1,5 +1,17 @@
 .problem-area {
-    .active {
-        color: #D381F5;
+    display: flex;
+
+    .content {
+        align-items: center;
+        justify-content: center;
+
+        .active {
+            color: #D381F5;
+        }
+
+        .title {
+            margin-top: 20px;
+            text-align: center;
+        }
     }
 }

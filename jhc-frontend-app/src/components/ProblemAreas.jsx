@@ -22,10 +22,14 @@ export const ProblemAreas = (props) => {
     const isActive = selectedProblems.includes(item.key);
     return (
         <div className="problem-area">
-            <IconButton onClick={handleOnClickUtalization} className={`${isActive && 'active'}`}>
-                {item.icon}
-            </IconButton>
-            {item.title}
+          <div className="content">
+              <IconButton onClick={handleOnClickUtalization} className={`${isActive && 'active'}`}>
+                  {item.icon}
+              </IconButton>
+              <div className="title">
+                {item.title}
+              </div>
+            </div>
         </div>
     )
 }
