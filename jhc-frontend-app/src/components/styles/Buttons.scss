@@ -1,0 +1,11 @@
+.jhc-btn {
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'MediumLLWeb-Regular';
+    &:hover {
+        color: #D381F5;
+    }
+}

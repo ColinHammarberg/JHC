@@ -1,6 +1,6 @@
 import JhcLanding from './components/JhcLanding';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { Problems } from './components/Problems';
+import { ProblemUtilization } from './components/ProblemUtilization';
 
 function App() {
   console.log("app", process.env.REACT_APP_BASEURL);
@@ -14,7 +14,7 @@ function App() {
             />
           <Route
             path={`/problems`}
-            element={<Problems />}
+            element={<ProblemUtilization />}
           />
         </Routes>
       </BrowserRouter>
