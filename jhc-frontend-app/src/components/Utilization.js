@@ -1,17 +1,17 @@
 import React from 'react';
 import { Avatar } from './Avatar';
 import './styles/ProblemUtilization.scss';
-import { ShowcaseCompany } from './ShowcaseCompany';
 import Microsoft from '../images/Microsoft.png';
 import Fellowmind from '../images/Fellowmind.png';
 import Vattenfall from '../images/Vattenfall.png';
 import Spce from '../images/SPCE.png';
 import { JhcButton } from './Buttons';
 import { useNavigate } from 'react-router-dom';
+import { ProblemAreas } from './ProblemAreas';
 
 export const Utalization = () => {
     const navigate = useNavigate();
-    const Images = [
+    const OrganizationProblems = [
         {
             key: 1,
             source: Microsoft
@@ -42,9 +42,9 @@ export const Utalization = () => {
                     Helping all from large companies to small start-ups succeed and reach their vision in the most engaging and tangible way.
                 </div>
                 <div className="showcase">
-                    {Images.map((item) => {
+                    {OrganizationProblems.map((item) => {
                         return (
-                            <ShowcaseCompany item={item} />
+                            <ProblemAreas item={item} />
                         )
                     })}
                 </div>
