@@ -1,11 +1,17 @@
 .jhc-btn {
-    height: 40px;
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: 'MediumLLWeb-Regular';
+    height: 40px !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    border-radius: 100px !important;
+
     &:hover {
-        color: #D381F5;
+        color: #D381F5 !important;
+    }
+
+    span {
+        font-family: 'MediumLLWeb-Regular' !important;
+        font-weight: bold !important;
     }
 }

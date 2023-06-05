@@ -1,15 +1,15 @@
 import React from 'react';
-import './styles/ShowcaseCompany.scss';
+import Button from '@mui/material/Button';
 import './styles/Buttons.scss';
 
 
-export const Button = (props) => {
+export const JhcButton = (props) => {
     function handleOnClick() {
         if (props.onClick) {
             props.onClick()
         }
     }
     return (
-        <Button className="jhc-btn" onClick={handleOnClick}>{props.label}</Button>
+        <Button className="jhc-btn" onClick={handleOnClick}><span>{props.label}</span></Button>
     )
 }

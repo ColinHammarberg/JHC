@@ -6,7 +6,7 @@ import Microsoft from '../images/Microsoft.png';
 import Fellowmind from '../images/Fellowmind.png';
 import Vattenfall from '../images/Vattenfall.png';
 import Spce from '../images/SPCE.png';
-import { Button } from './Buttons';
+import { JhcButton } from './Buttons';
 
 export const ProblemUtilization = () => {
     const Images = [
@@ -43,7 +43,9 @@ export const ProblemUtilization = () => {
                         )
                     })}
                 </div>
-                <Button label="Enter Site" />
+                <div className="redirect-btn">
+                    <JhcButton label="Enter Site" />
+                </div>
             </div>
         </div>
     )
