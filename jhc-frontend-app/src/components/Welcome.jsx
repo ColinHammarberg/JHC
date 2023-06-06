@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar } from './Avatar';
 import './styles/Welcome.scss';
 import { ShowcaseCompany } from './ShowcaseCompany';
@@ -8,9 +8,11 @@ import Vattenfall from '../images/Vattenfall.png';
 import Spce from '../images/SPCE.png';
 import { JhcButton } from './Buttons';
 import { useNavigate } from 'react-router-dom';
+import { Menu } from './Menu';
 
 export const Welcome = () => {
     const navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false);
     const Images = [
         {
             key: 1,
@@ -32,8 +34,20 @@ export const Welcome = () => {
     function handleOnClick() {
         navigate('/utalization');
     }
+
+    const handleOpenMenu = () => {
+        setIsOpen(true);
+    };
+
+    const handleCloseMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <div className="welcome">
+            <div className={!isOpen ? 'closed-menu' : 'opened-menu'}>
+                <Menu handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
+            </div>
             <div className="content">
                 <div className="avatar">
                     <Avatar />

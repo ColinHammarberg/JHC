@@ -26,3 +26,21 @@ export const OrganizationProblems = [
         title: 'GO-TO-MARKET'
     },
 ]
+
+export const menuItems = [
+    {
+        key: 1,
+        navigation: '/',
+        title: 'Books',
+    },
+    {
+        key: 2,
+        navigation: '/',
+        title: 'Books',
+    },
+    {
+        key: 3,
+        navigation: '/',
+        title: 'Books',
+    },
+]
