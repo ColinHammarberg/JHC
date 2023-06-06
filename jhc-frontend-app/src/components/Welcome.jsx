@@ -13,6 +13,7 @@ import { Menu } from './Menu';
 export const Welcome = () => {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
     const Images = [
         {
             key: 1,
@@ -43,10 +44,14 @@ export const Welcome = () => {
         setIsOpen(false);
     };
 
+    function handleOnClickMenuItem (item) {
+        setSelectedItem(item);
+    }
+
     return (
         <div className="welcome">
             <div className={!isOpen ? 'closed-menu' : 'opened-menu'}>
-                <Menu handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
+                <Menu handleOnClickMenuItem={handleOnClickMenuItem} selectedItem={selectedItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
             </div>
             <div className="content">
                 <div className="avatar">
