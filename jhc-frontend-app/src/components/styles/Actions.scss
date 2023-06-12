@@ -1,0 +1,40 @@
+.result {
+    height: 100vh;
+    border-left: #D381F5 25px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    .divider {
+        width: 5px;
+        height: 180px;
+        background-color: #D381F5;
+    }
+
+    .schedule-meeting {
+        .MuiIconButton-root {
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+    
+            .MuiSvgIcon-root {
+                font-size: 100px;
+            }
+        }
+    }
+
+    .how-it-works {
+        .MuiIconButton-root {
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+    
+            .MuiSvgIcon-root {
+                font-size: 100px;
+            }
+        }
+    }
+}
