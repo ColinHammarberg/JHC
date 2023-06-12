@@ -5,13 +5,10 @@ export const JhcContext = createContext();
 
 const JhcContextProvider = ({ children }) => {
   const [selectedProblemType, setSelectedProblemType] = useState([]);
+  console.log('selectedProblemType', selectedProblemType);
 
   function handleOnClickProblemType(problemType) {
-    if (!selectedProblemType.includes(problemType.key)) {
-      setSelectedProblemType([problemType, ...selectedProblemType])
-    } else {
-      return;
-    }
+    setSelectedProblemType([problemType, ...selectedProblemType])
   }
 
   return (

@@ -1,35 +1,31 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import './styles/ProblemArea.scss';
 import { IconButton } from '@mui/material';
+import { JhcContext } from '../context/JhcContext';
 
 export const ProblemAreas = (props) => {
-    const { item } = props;
-    const [selectedProblems, setSelectedProblems] = useState([]);
-    function handleOnClickUtalization() {
-        const selectedIndex = selectedProblems.indexOf(item.key);
-        if (selectedIndex > -1) {
-          // Item is already selected, remove it from the selectedProblems array
-          setSelectedProblems(selectedProblems.filter((key) => key !== item.key));
-        } else {
-          // Item is not selected, add it to the selectedProblems array
-          setSelectedProblems([...selectedProblems, item.key]);
-        }
-    
-        if (props.onClick) {
-          props.onClick(item);
-        }
+  const { item } = props;
+  const { selectedProblemType, setSelectedProblemType } = useContext(JhcContext);
+
+  function handleOnClickUtalization() {
+    if (selectedProblemType.includes(item.key)) {
+      setSelectedProblemType(selectedProblemType.filter((key) => key !== item.key));
+    } else {
+      setSelectedProblemType([...selectedProblemType, item.key]);
+      props.onClick(item);
     }
-    const isActive = selectedProblems.includes(item.key);
-    return (
-        <div className="problem-area">
-          <div className="content">
-              <IconButton onClick={handleOnClickUtalization} className={`${isActive && 'active'}`}>
-                  {item.icon}
-              </IconButton>
-              <div className="title">
-                {item.title}
-              </div>
-            </div>
-        </div>
-    )
-}
+  }
+
+  const isActive = selectedProblemType.includes(item.key);
+
+  return (
+    <div className="problem-area">
+      <div className="content">
+        <IconButton onClick={handleOnClickUtalization} className={isActive && 'active'}>
+          {item.icon}
+        </IconButton>
+        <div className="title">{item.title}</div>
+      </div>
+    </div>
+  );
+};

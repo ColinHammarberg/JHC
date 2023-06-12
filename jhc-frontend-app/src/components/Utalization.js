@@ -9,16 +9,15 @@ import { JhcContext } from '../context/JhcContext';
 
 export const Utalization = () => {
     const navigate = useNavigate();
-    const { selectedProblemType, handleOnClickProblemType } = useContext(JhcContext);
+    const { selectedProblemType, setSelectedProblemType, handleOnClickProblemType } = useContext(JhcContext);
     function handleOnClickProblem(problemType) {
         handleOnClickProblemType(problemType)
-        console.log('selectedProblemType', selectedProblemType);
     }
 
     function handleOnClickRedirect() {
         navigate('/meetings');
     }
-    
+
     return (
         <div className="problem-utilization">
             <div className="content">
@@ -31,7 +30,7 @@ export const Utalization = () => {
                 <div className="showcase">
                     {OrganizationProblems.map((item) => {
                         return (
-                            <ProblemAreas onClick={handleOnClickProblem} item={item} />
+                            <ProblemAreas onClick={handleOnClickProblem} item={item} selectedProblemType={selectedProblemType} setSelectedProblemType={setSelectedProblemType} />
                         )
                     })}
                 </div>
