@@ -16,7 +16,7 @@ export const ProblemAreas = (props) => {
         }
     
         if (props.onClick) {
-          props.onClick(item.key);
+          props.onClick(item);
         }
     }
     const isActive = selectedProblems.includes(item.key);

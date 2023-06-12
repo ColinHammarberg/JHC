@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Avatar } from './Avatar';
 import './styles/Utalization.scss';
 import { JhcButton } from './Buttons';
 import { useNavigate } from 'react-router-dom';
 import { ProblemAreas } from './ProblemAreas';
 import { OrganizationProblems } from '../constants/Constants';
+import { JhcContext } from '../context/JhcContext';
 
 export const Utalization = () => {
     const navigate = useNavigate();
-    const [selectedUtalization, setSelectedUtalization] = useState([]);
-    function handleOnClickUtalization(type) {
-        setSelectedUtalization([type]);
-        console.log('selectedUtalization', selectedUtalization);
+    const { selectedProblemType, handleOnClickProblemType } = useContext(JhcContext);
+    function handleOnClickProblem(problemType) {
+        handleOnClickProblemType(problemType)
+        console.log('selectedProblemType', selectedProblemType);
     }
+
     function handleOnClickRedirect() {
         navigate('/meetings');
     }
+    
     return (
         <div className="problem-utilization">
             <div className="content">
@@ -28,7 +31,7 @@ export const Utalization = () => {
                 <div className="showcase">
                     {OrganizationProblems.map((item) => {
                         return (
-                            <ProblemAreas onClick={handleOnClickUtalization} item={item} />
+                            <ProblemAreas onClick={handleOnClickProblem} item={item} />
                         )
                     })}
                 </div>

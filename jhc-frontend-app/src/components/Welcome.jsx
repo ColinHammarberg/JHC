@@ -44,14 +44,14 @@ export const Welcome = () => {
         setIsOpen(false);
     };
 
-    function handleOnClickMenuItem (item) {
-        setSelectedItem(item);
+    function handleOnClickMenuItem (key) {
+        setSelectedItem(key);
     }
 
     return (
         <div className="welcome">
             <div className={!isOpen ? 'closed-menu' : 'opened-menu'}>
-                <Menu handleOnClickMenuItem={handleOnClickMenuItem} selectedItem={selectedItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
+                <Menu handleOnClickMenuItem={handleOnClickMenuItem} setSelectedItem={setSelectedItem} selectedItem={selectedItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
             </div>
             <div className="content">
                 <div className="avatar">
