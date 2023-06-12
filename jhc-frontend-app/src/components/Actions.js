@@ -6,14 +6,17 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import { IconButton } from '@mui/material';
 
-export const Meetings = () => {
-    const { selectedProblemType } = useContext(JhcContext);
+export const Actions = () => {
     const navigate = useNavigate();
+    
+    function handleOnClickRedirect() {
+        navigate('/actions');
+    }
 
     return (
         <div className="result">
             <div className="schedule-meeting">
-                <IconButton onClick={navigate('/booking')}>
+                <IconButton onClick={handleOnClickRedirect}>
                     <CalendarMonthIcon />
                 </IconButton>
                 <div className="schedule-meeting-description">
@@ -22,7 +25,7 @@ export const Meetings = () => {
             </div>
             <div className="divider"></div>
             <div className="how-it-works">
-                <IconButton onClick={navigate('/spce')}>
+                <IconButton onClick={handleOnClickRedirect('/spce')}>
                     <WorkspacesIcon />
                 </IconButton>
                 <div className="schedule-meeting-description">

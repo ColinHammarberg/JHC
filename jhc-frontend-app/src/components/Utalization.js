@@ -15,7 +15,7 @@ export const Utalization = () => {
     }
 
     function handleOnClickRedirect() {
-        navigate('/meetings');
+        navigate('/actions');
     }
 
     return (

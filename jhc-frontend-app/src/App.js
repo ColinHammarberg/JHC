@@ -3,7 +3,8 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { Welcome } from './components/Welcome';
 import { Utalization } from './components/Utalization';
 import JhcContextProvider from './context/JhcContext';
-import { Meetings } from './components/Actions';
+import { Actions } from './components/Actions';
+import { Bookings } from './components/Bookings';
 
 function App() {
   console.log("app", process.env.REACT_APP_BASEURL);
@@ -25,12 +26,12 @@ function App() {
               element={<Utalization />}
             />
             <Route
-              path={`/meetings`}
-              element={<Meetings />}
+              path={`/actions`}
+              element={<Actions />}
             />
             <Route
-              path={`/meetings`}
-              element={<Meetings />}
+              path={`/bookings`}
+              element={<Bookings />}
             />
           </Routes>
         </BrowserRouter>
