@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles/Bookings.scss';
-import InlineWidget from './CalendyDialog';
+import CalendyWidget from './CalendyWidget';
 
 export const Bookings = () => {
 
     return (
         <div className="booking">
-            <InlineWidget />
+            <CalendyWidget />
         </div>
     )
 }
