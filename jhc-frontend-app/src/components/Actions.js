@@ -13,6 +13,10 @@ export const Actions = () => {
         navigate('/bookings');
     }
 
+    function handleOnClickRedirectSpce() {
+        navigate('/customercases');
+    }
+
     return (
         <div className="action">
             <Avatar />
@@ -27,7 +31,7 @@ export const Actions = () => {
                 </div>
                 <div className="divider"></div>
                 <div className="how-it-works">
-                    <Button>
+                    <Button onClick={handleOnClickRedirectSpce}>
                         <WorkspacesIcon />
                     </Button>
                     <div className="schedule-meeting-description">
