@@ -16,7 +16,7 @@ export const Actions = () => {
     return (
         <div className="action">
             <Avatar />
-            <div className="result">
+            <div className="action-options">
                 <div className="schedule-meeting">
                     <Button onClick={handleOnClickRedirectBooking}>
                         <CalendarMonthIcon />
