@@ -15,27 +15,27 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route
-                path={`/`}
-                element={<JhcLanding />}
-              />
+              path={process.env.REACT_APP_BASEURL}
+              element={<JhcLanding />}
+            />
             <Route
-              path={`/welcome`}
+              path={`${process.env.REACT_APP_BASEURL}/welcome`}
               element={<Welcome />}
             />
             <Route
-              path={`/utalization`}
+              path={`${process.env.REACT_APP_BASEURL}/utalization`}
               element={<Utalization />}
             />
             <Route
-              path={`/actions`}
+              path={`${process.env.REACT_APP_BASEURL}/actions`}
               element={<Actions />}
             />
             <Route
-              path={`/bookings`}
+              path={`${process.env.REACT_APP_BASEURL}/bookings`}
               element={<Bookings />}
             />
             <Route
-              path={`/customercases`}
+              path={`${process.env.REACT_APP_BASEURL}/customercases`}
               element={<CustomerCases />}
             />
           </Routes>
