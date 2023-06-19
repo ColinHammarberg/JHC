@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "rimraf ./build && env-cmd -f .env npm run build && replace '/static' '/jhc-frontend-app/static'  build/index.html",
+    "build": "env-cmd -f .env npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
