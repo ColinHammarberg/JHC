@@ -3,3 +3,28 @@
         display: none;
     }
 }
+
+.booking {
+    .avatar {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        .avatar {
+            img {
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+    }
+
+    .calendy {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 50px;
+        .App {
+            width: 712px;
+        }
+    }
+}
