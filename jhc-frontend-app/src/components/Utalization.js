@@ -9,10 +9,7 @@ import { JhcContext } from '../context/JhcContext';
 
 export const Utalization = () => {
     const navigate = useNavigate();
-    const { selectedProblemType, setSelectedProblemType, handleOnClickProblemType } = useContext(JhcContext);
-    function handleOnClickProblem(problemType) {
-        handleOnClickProblemType(problemType)
-    }
+    const { selectedProblemType, setSelectedProblemType } = useContext(JhcContext);
 
     function handleOnClickRedirect() {
         navigate(`${process.env.REACT_APP_BASEURL}/actions`);
@@ -30,7 +27,7 @@ export const Utalization = () => {
                 <div className="showcase">
                     {OrganizationProblems.map((item) => {
                         return (
-                            <ProblemAreas onClick={handleOnClickProblem} item={item} selectedProblemType={selectedProblemType} setSelectedProblemType={setSelectedProblemType} />
+                            <ProblemAreas item={item} selectedProblemType={selectedProblemType} setSelectedProblemType={setSelectedProblemType} />
                         )
                     })}
                 </div>

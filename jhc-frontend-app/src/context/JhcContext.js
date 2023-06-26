@@ -4,19 +4,28 @@ import React, { createContext, useState } from 'react';
 export const JhcContext = createContext();
 
 const JhcContextProvider = ({ children }) => {
-  const [selectedProblemType, setSelectedProblemType] = useState([]);
-  console.log('selectedProblemType', selectedProblemType);
+  const [selectedProblems, setSelectedProblems] = useState([]);
 
-  function handleOnClickProblemType(problemType) {
-    setSelectedProblemType([problemType, ...selectedProblemType])
+  function handleOnClickUtalization(item) {
+    console.log('item', item);
+    const selectedIndex = selectedProblems.indexOf(item.key);
+    if (selectedIndex > -1) {
+      // Item is already selected, remove it from the selectedProblems array
+      const updatedProblems = [...selectedProblems];
+      updatedProblems.splice(selectedIndex, 1);
+      setSelectedProblems(updatedProblems);
+    } else {
+      // Item is not selected, add it to the selectedProblems array
+      setSelectedProblems([...selectedProblems, item.key]);
+    }
   }
 
   return (
     <JhcContext.Provider
       value={{
-        selectedProblemType,
-        setSelectedProblemType,
-        handleOnClickProblemType
+        selectedProblems,
+        setSelectedProblems,
+        handleOnClickUtalization
       }}
     >
       {children}
