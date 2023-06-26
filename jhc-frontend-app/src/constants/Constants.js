@@ -31,12 +31,12 @@ export const menuItems = [
     {
         key: 1,
         navigation: '/',
-        title: 'Books',
+        title: 'About Jonas',
     },
     {
         key: 2,
         navigation: '/',
-        title: 'Books',
+        title: 'Inspiration',
     },
     {
         key: 3,

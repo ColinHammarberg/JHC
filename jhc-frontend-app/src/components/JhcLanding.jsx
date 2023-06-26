@@ -29,7 +29,8 @@ function JhcLanding() {
     }, 9000);
 
     const timeoutRedirect = setTimeout(() => {
-      navigate(`${process.env.REACT_APP_BASEURL}/welcome`);
+      // navigate(`/welcome`);
+      navigate(`${process.env.REACT_APP_BASEURL}/welcome` );
     }, 14000);
 
     return () => {

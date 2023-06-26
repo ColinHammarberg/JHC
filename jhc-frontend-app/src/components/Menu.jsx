@@ -22,9 +22,11 @@ export const Menu = (props) => {
                 </div>
             ) : (
                 <div className="opened-menu-item">
-                    <IconButton>
-                        <MenuOpenIcon onClick={props.handleCloseMenu} />
-                    </IconButton>
+                    <div className="close-btn">
+                        <IconButton>
+                            <MenuOpenIcon onClick={props.handleCloseMenu} />
+                        </IconButton>
+                    </div>
                     <div className="menu">
                         <div className="menu-items">
                             {menuItems.map((item) => (
