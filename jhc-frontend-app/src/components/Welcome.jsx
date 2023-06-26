@@ -33,7 +33,7 @@ export const Welcome = () => {
         },
     ]
     function handleOnClick() {
-        navigate('/utalization');
+        navigate(`${process.env.REACT_APP_BASEURL}/utalization`);
     }
 
     const handleOpenMenu = () => {

@@ -10,11 +10,11 @@ export const Actions = () => {
     const navigate = useNavigate();
     
     function handleOnClickRedirectBooking() {
-        navigate('/bookings');
+        navigate(`${process.env.REACT_APP_BASEURL}/bookings`);
     }
 
     function handleOnClickRedirectSpce() {
-        navigate('/customercases');
+        navigate(`${process.env.REACT_APP_BASEURL}/customercases`);
     }
 
     return (
