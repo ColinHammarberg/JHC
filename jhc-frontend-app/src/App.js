@@ -1,5 +1,5 @@
 import JhcLanding from './components/JhcLanding';
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 import { Welcome } from './components/Welcome';
 import { Utalization } from './components/Utalization';
 import JhcContextProvider from './context/JhcContext';
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <JhcContextProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route
               path={process.env.REACT_APP_BASEURL}
@@ -39,7 +39,7 @@ function App() {
               element={<CustomerCases />}
             />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </JhcContextProvider>
     </div>
   );
