@@ -15,7 +15,7 @@ export const Utalization = () => {
     }
 
     function handleOnClickRedirect() {
-        navigate('/actions');
+        navigate(`${process.env.REACT_APP_BASEURL}/actions`);
     }
 
     return (
