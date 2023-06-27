@@ -6,12 +6,12 @@ import Microsoft from '../images/Microsoft.png';
 import Fellowmind from '../images/Fellowmind.png';
 import Vattenfall from '../images/Vattenfall.png';
 import Spce from '../images/SPCE.png';
-import { JhcButton } from './Buttons';
-import { useNavigate } from 'react-router-dom';
+// import { JhcButton } from './Buttons';
+// import { useNavigate } from 'react-router-dom';
 import { Menu } from './Menu';
 
 export const Welcome = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
     const Images = [
@@ -32,10 +32,10 @@ export const Welcome = () => {
             source: Spce
         },
     ]
-    function handleOnClick() {
-        navigate(`${process.env.REACT_APP_BASEURL}/utalization` );
-        // navigate(`/utalization` );
-    }
+    // function handleOnClick() {
+    //     navigate(`${process.env.REACT_APP_BASEURL}/utalization` );
+    //     // navigate(`/utalization` );
+    // }
 
     const handleOpenMenu = () => {
         setIsOpen(true);
@@ -68,9 +68,9 @@ export const Welcome = () => {
                         )
                     })}
                 </div>
-                <div className="redirect-btn">
+                {/* <div className="redirect-btn">
                     <JhcButton onClick={handleOnClick} label="Enter Site" />
-                </div>
+                </div> */}
             </div>
         </div>
     )

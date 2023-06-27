@@ -1,3 +1,5 @@
+@import '../../fonts/fonts.scss';
+
 @keyframes floatIn {
     0% {
         opacity: 0;
@@ -23,6 +25,7 @@
         top: 40px;
         right: 40px;
     }
+
     .opened-menu {
         position: absolute;
         top: 0;
@@ -42,6 +45,7 @@
         .description {
             font-size: 15px;
             font-family: 'MediumLLWeb-Regular';
+            font-weight: 700;
             animation: floatIn 2s ease-in-out;
         }
 
@@ -53,6 +57,7 @@
             margin-top: 20px;
             animation: floatIn 3s ease-in-out;
         }
+
         .redirect-btn {
             align-items: center;
             justify-content: center;
