@@ -41,6 +41,11 @@
             justify-content: center;
             margin-bottom: 20px;
             animation: floatIn 1s ease-in-out;
+
+            img {
+                width: 200px;
+                height: 150px;
+            }
         }
 
         .description {
@@ -80,12 +85,6 @@
 
 @include media(phone) {
     .welcome {
-        .avatar {
-            img {
-                width: 150px;
-            }
-        }
-
         .content {
             padding: 24px;
 
