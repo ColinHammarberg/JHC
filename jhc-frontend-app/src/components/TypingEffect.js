@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import './styles/TypingEffect.scss';
 
-const TypingEffect = () => {
+const TypingEffect = (props) => {
   const textRef = useRef(null);
   const subTextRef = useRef(null);
+  const { className } = props;
 
   useEffect(() => {
     const text = 'Jonas Hammarberg';
@@ -14,14 +15,14 @@ const TypingEffect = () => {
       if (index < text.length) {
         textRef.current.textContent = text.slice(0, index + 1);
         index++;
-        setTimeout(typeText, 200); // Adjust the typing speed here (in milliseconds)
+        setTimeout(typeText, 150); // Adjust the typing speed here (in milliseconds)
       } else {
         let subIndex = 0;
         const typeSubText = () => {
           if (subIndex < subText.length) {
             subTextRef.current.textContent = subText.slice(0, subIndex + 1);
             subIndex++;
-            setTimeout(typeSubText, 150); // Adjust the typing speed here (in milliseconds)
+            setTimeout(typeSubText, 100); // Adjust the typing speed here (in milliseconds)
           }
         };
         typeSubText();
@@ -32,7 +33,7 @@ const TypingEffect = () => {
   }, []);
 
   return (
-    <div className="typing-effect">
+    <div className={`typing-effect ${className}`}>
         <div>
             <span ref={textRef}></span>
         </div>
