@@ -9,7 +9,7 @@ export const Menu = (props) => {
     const { selectedItem } = props;
 
     function handleOnClick(item) {
-        props.handleOnClickMenuItem(item.key);
+        props.handleOnClickMenuItem(item.navigation);
     }
 
     return (

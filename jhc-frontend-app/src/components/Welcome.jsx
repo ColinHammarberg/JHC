@@ -9,11 +9,13 @@ import Vattenfall from '../images/Vattenfall.png';
 // import { JhcButton } from './Buttons';
 // import { useNavigate } from 'react-router-dom';
 import { Menu } from './Menu';
+import { useNavigate } from 'react-router-dom';
 
 export const Welcome = () => {
     // const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
+    const navigate = useNavigate();
     const Images = [
         {
             key: 1,
@@ -45,8 +47,8 @@ export const Welcome = () => {
         setIsOpen(false);
     };
 
-    function handleOnClickMenuItem (key) {
-        setSelectedItem(key);
+    function handleOnClickMenuItem (navigation) {
+        navigate(`${process.env.REACT_APP_BASEURL}/${navigation}` );
     }
 
     return (

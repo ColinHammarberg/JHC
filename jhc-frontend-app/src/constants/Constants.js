@@ -30,27 +30,27 @@ export const OrganizationProblems = [
 export const menuItems = [
     {
         key: 1,
-        navigation: '/inspiration',
+        navigation: 'customercases',
         title: "Usecases",
     },
     {
         key: 2,
-        navigation: '/bookings',
+        navigation: 'bookings',
         title: 'Bookings',
     },
     {
         key: 3,
-        navigation: '/about',
+        navigation: 'about',
         title: 'About Jonas',
     },
     {
         key: 4,
-        navigation: '/',
+        navigation: 'utalization',
         title: 'Inspiration',
     },
     {
         key: 5,
-        navigation: '/',
+        navigation: '',
         title: 'Books',
     },
 ]
