@@ -42,14 +42,14 @@ function JhcLanding() {
   return (
     <div className="home-container">
       {!showLoading ? (
-        <>
+        <div className="landing-area">
           <div className="avatar">
             <Avatar />
           </div>
           <div className="typing">
             <TypingEffect />
           </div>
-        </>
+        </div>
       ) : (
         <div className="count-down">
           You will be re-directed in <span>{seconds}</span> seconds
