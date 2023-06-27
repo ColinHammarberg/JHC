@@ -55,23 +55,30 @@
     &.transition {
         background-color: white;
         transition: background-color 4s ease;
+
         .landing-area {
             display: none;
         }
     }
 
     .landing-area {
-        height: 600px;
+        height: 400px;
 
         .avatar {
             animation: drop-in 1.5s forwards, bounce 2.4s ease-in-out 1s 3;
             position: relative;
+
+            img {
+                width: 200px;
+                height: 150px;
+            }
         }
 
         .typing {
             text-align: center;
 
             .typing-effect {
+
                 // &.transition {
                 //     color: #000;
                 //     transition: color 1s ease;

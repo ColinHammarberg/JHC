@@ -30,16 +30,26 @@ export const OrganizationProblems = [
 export const menuItems = [
     {
         key: 1,
-        navigation: '/',
-        title: 'About Jonas',
+        navigation: '/inspiration',
+        title: "Usecases",
     },
     {
         key: 2,
+        navigation: '/bookings',
+        title: 'Bookings',
+    },
+    {
+        key: 3,
+        navigation: '/about',
+        title: 'About Jonas',
+    },
+    {
+        key: 4,
         navigation: '/',
         title: 'Inspiration',
     },
     {
-        key: 3,
+        key: 5,
         navigation: '/',
         title: 'Books',
     },
