@@ -8,7 +8,7 @@ import Vattenfall from '../images/Vattenfall.png';
 import Spce from '../images/SPCE.png';
 // import { JhcButton } from './Buttons';
 // import { useNavigate } from 'react-router-dom';
-import { Menu } from './Menu'; 
+import { Menu } from './Menu';
 
 export const Welcome = () => {
     // const navigate = useNavigate();
