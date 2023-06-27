@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/JHC/static/css/main.b56c0d51.css",
-    "main.js": "/JHC/static/js/main.824289c0.js",
+    "main.css": "/JHC/static/css/main.001c77c6.css",
+    "main.js": "/JHC/static/js/main.3d68fa05.js",
     "static/js/787.e363e5fb.chunk.js": "/JHC/static/js/787.e363e5fb.chunk.js",
     "static/media/MediumLLWeb-Regular.woff": "/JHC/static/media/MediumLLWeb-Regular.9eca4e98fa6a2ead5fc1.woff",
     "static/media/MediumLLWeb-Bold.woff": "/JHC/static/media/MediumLLWeb-Bold.2f4f7190959c44a37865.woff",
@@ -14,12 +14,12 @@
     "static/media/MediumLLSub-RegularSubset.woff2": "/JHC/static/media/MediumLLSub-RegularSubset.9bc0aad0683b272a2194.woff2",
     "static/media/F37Judge-MediumCondensed.woff2": "/JHC/static/media/F37Judge-MediumCondensed.b1d7ebb07eaef5731528.woff2",
     "index.html": "/JHC/index.html",
-    "main.b56c0d51.css.map": "/JHC/static/css/main.b56c0d51.css.map",
-    "main.824289c0.js.map": "/JHC/static/js/main.824289c0.js.map",
+    "main.001c77c6.css.map": "/JHC/static/css/main.001c77c6.css.map",
+    "main.3d68fa05.js.map": "/JHC/static/js/main.3d68fa05.js.map",
     "787.e363e5fb.chunk.js.map": "/JHC/static/js/787.e363e5fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b56c0d51.css",
-    "static/js/main.824289c0.js"
+    "static/css/main.001c77c6.css",
+    "static/js/main.3d68fa05.js"
   ]
 }
