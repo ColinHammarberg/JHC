@@ -1,4 +1,5 @@
 @import '../../fonts/fonts.scss';
+@import './utils/ResponsiveUtils.scss';
 
 @keyframes floatIn {
     0% {
@@ -47,15 +48,24 @@
             font-family: 'MediumLLWeb-Regular';
             font-weight: 500;
             animation: floatIn 2s ease-in-out;
+            text-align: center;
         }
 
         .showcase {
             display: flex;
-            gap: 30px;
+            gap: 40px;
             align-items: center;
             justify-content: center;
+            text-align: center;
             margin-top: 20px;
             animation: floatIn 3s ease-in-out;
+
+            .showcase-company {
+                img {
+                    max-width: 180px;
+                    height: 40px;
+                }
+            }
         }
 
         .redirect-btn {
@@ -64,6 +74,28 @@
             display: flex;
             margin-top: 20px;
             animation: floatIn 4s ease-in-out;
+        }
+    }
+}
+
+@include media(phone) {
+    .welcome {
+        .avatar {
+            img {
+                width: 150px;
+            }
+        }
+
+        .content {
+            padding: 24px;
+
+            .showcase {
+                display: block;
+
+                .showcase-company {
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
 }

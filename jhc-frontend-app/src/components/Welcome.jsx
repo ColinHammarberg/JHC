@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Avatar } from './Avatar';
 import './styles/Welcome.scss';
 import { ShowcaseCompany } from './ShowcaseCompany';
-import Microsoft from '../images/Microsoft.png';
-import Fellowmind from '../images/Fellowmind.png';
+import Microsoft from '../images/MicrosoftTeams.png';
+import Fellowmind from '../images/fellowmind.webp';
 import Vattenfall from '../images/Vattenfall.png';
-import Spce from '../images/SPCE.png';
+// import Spce from '../images/SPCE.png';
 // import { JhcButton } from './Buttons';
 // import { useNavigate } from 'react-router-dom';
 import { Menu } from './Menu';
@@ -27,10 +27,10 @@ export const Welcome = () => {
             key: 3,
             source: Vattenfall
         },
-        {
-            key: 4,
-            source: Spce
-        },
+        // {
+        //     key: 4,
+        //     source: Spce
+        // },
     ]
     // function handleOnClick() {
     //     navigate(`${process.env.REACT_APP_BASEURL}/utalization` );
