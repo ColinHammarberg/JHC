@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/JHC/static/css/main.680cd85a.css",
-    "main.js": "/JHC/static/js/main.7364e5bf.js",
+    "main.css": "/JHC/static/css/main.867334f5.css",
+    "main.js": "/JHC/static/js/main.01c47ebd.js",
     "static/js/787.e363e5fb.chunk.js": "/JHC/static/js/787.e363e5fb.chunk.js",
     "static/media/MediumLLWeb-Regular.woff": "/JHC/static/media/MediumLLWeb-Regular.9eca4e98fa6a2ead5fc1.woff",
     "static/media/MediumLLWeb-Bold.woff": "/JHC/static/media/MediumLLWeb-Bold.2f4f7190959c44a37865.woff",
@@ -16,12 +16,12 @@
     "static/media/MicrosoftTeams.png": "/JHC/static/media/MicrosoftTeams.f6a87e7e16652068ce40.png",
     "static/media/fellowmind.webp": "/JHC/static/media/fellowmind.18af05a8af3ab1236115.webp",
     "index.html": "/JHC/index.html",
-    "main.680cd85a.css.map": "/JHC/static/css/main.680cd85a.css.map",
-    "main.7364e5bf.js.map": "/JHC/static/js/main.7364e5bf.js.map",
+    "main.867334f5.css.map": "/JHC/static/css/main.867334f5.css.map",
+    "main.01c47ebd.js.map": "/JHC/static/js/main.01c47ebd.js.map",
     "787.e363e5fb.chunk.js.map": "/JHC/static/js/787.e363e5fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.680cd85a.css",
-    "static/js/main.7364e5bf.js"
+    "static/css/main.867334f5.css",
+    "static/js/main.01c47ebd.js"
   ]
 }
