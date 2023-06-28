@@ -48,7 +48,7 @@ export const Welcome = () => {
     };
 
     function handleOnClickMenuItem (navigation) {
-        navigate(`/${navigation}` );
+        navigate(`${process.env.REACT_APP_BASEURL}/${navigation}` );
     }
 
     return (
