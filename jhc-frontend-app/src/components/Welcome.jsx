@@ -5,11 +5,11 @@ import { ShowcaseCompany } from './ShowcaseCompany';
 import Microsoft from '../images/MicrosoftTeams.png';
 import Fellowmind from '../images/fellowmind.webp';
 import Vattenfall from '../images/Vattenfall.png';
-// import Spce from '../images/SPCE.png';
+import Spce from '../images/spce-logo.png';
 // import { JhcButton } from './Buttons';
 // import { useNavigate } from 'react-router-dom';
-import { Menu } from './Menu';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 export const Welcome = () => {
     // const navigate = useNavigate();
@@ -29,10 +29,10 @@ export const Welcome = () => {
             key: 3,
             source: Vattenfall
         },
-        // {
-        //     key: 4,
-        //     source: Spce
-        // },
+        {
+            key: 4,
+            source: Spce
+        },
     ]
     // function handleOnClick() {
     //     navigate(`${process.env.REACT_APP_BASEURL}/utalization` );
@@ -48,14 +48,12 @@ export const Welcome = () => {
     };
 
     function handleOnClickMenuItem (navigation) {
-        navigate(`${process.env.REACT_APP_BASEURL}/${navigation}` );
+        navigate(`/${navigation}` );
     }
 
     return (
         <div className="welcome">
-            <div className={!isOpen ? 'closed-menu' : 'opened-menu'}>
-                <Menu handleOnClickMenuItem={handleOnClickMenuItem} setSelectedItem={setSelectedItem} selectedItem={selectedItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
-            </div>
+           <Header handleOnClickMenuItem={handleOnClickMenuItem} setSelectedItem={setSelectedItem} selectedItem={selectedItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
             <div className="content">
                 <div className="avatar">
                     <Avatar />

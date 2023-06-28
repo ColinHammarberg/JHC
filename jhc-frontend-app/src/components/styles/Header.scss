@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    height: 40px;
+
+    .closed-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .opened-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .back-button {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+}

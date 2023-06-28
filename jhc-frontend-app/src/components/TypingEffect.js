@@ -12,14 +12,14 @@ const TypingEffect = (props) => {
     let index = 0;
 
     const typeText = () => {
-      if (index < text.length) {
+      if (index < text.length && textRef.current) {
         textRef.current.textContent = text.slice(0, index + 1);
         index++;
         setTimeout(typeText, 150); // Adjust the typing speed here (in milliseconds)
       } else {
         let subIndex = 0;
         const typeSubText = () => {
-          if (subIndex < subText.length) {
+          if (subIndex < subText.length && textRef.current) {
             subTextRef.current.textContent = subText.slice(0, subIndex + 1);
             subIndex++;
             setTimeout(typeSubText, 100); // Adjust the typing speed here (in milliseconds)

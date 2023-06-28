@@ -35,18 +35,18 @@ export const menuItems = [
     },
     {
         key: 2,
-        navigation: 'bookings',
-        title: 'Bookings',
+        navigation: 'utalization',
+        title: 'Request Help',
     },
     {
         key: 3,
-        navigation: 'about',
-        title: 'About Jonas',
+        navigation: 'actions',
+        title: 'Book Jonas',
     },
     {
         key: 4,
-        navigation: 'utalization',
-        title: 'Inspiration',
+        navigation: 'about',
+        title: 'About Jonas',
     },
     {
         key: 5,

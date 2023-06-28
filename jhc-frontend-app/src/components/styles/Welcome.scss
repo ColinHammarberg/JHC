@@ -21,18 +21,6 @@
     align-items: center;
     justify-content: center;
 
-    .closed-menu {
-        position: absolute;
-        top: 40px;
-        right: 40px;
-    }
-
-    .opened-menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
     .content {
         .avatar {
             margin: 0;
