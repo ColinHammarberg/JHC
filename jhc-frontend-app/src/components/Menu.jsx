@@ -6,12 +6,9 @@ import { menuItems } from '../constants/Constants';
 import { Button, IconButton } from '@mui/material';
 
 export const Menu = (props) => {
-    const { selectedItem } = props;
-
     function handleOnClick(item) {
         props.handleOnClickMenuItem(item.navigation);
     }
-
     return (
         <div>
             {!props.isOpen ? (
@@ -33,7 +30,7 @@ export const Menu = (props) => {
                                 <Button
                                     key={item.key}
                                     onClick={() => handleOnClick(item)}
-                                    className={`menu-item ${selectedItem === item.key ? 'active' : ''}`}
+                                    className="menu-item"
                                 >
                                     {item.title}
                                 </Button>

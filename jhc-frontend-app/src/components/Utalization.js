@@ -7,6 +7,7 @@ import { ProblemAreas } from './ProblemAreas';
 import { OrganizationProblems } from '../constants/Constants';
 import { JhcContext } from '../context/JhcContext';
 import Image from '../images/Jonas-4.png';
+import Header from './Header';
 
 export const Utalization = () => {
     const navigate = useNavigate();
@@ -19,6 +20,7 @@ export const Utalization = () => {
     return (
         <div className="problem-utilization">
             <div className="content">
+                <Header />
                 <div className="avatar">
                     <Avatar image={Image} />
                 </div>
