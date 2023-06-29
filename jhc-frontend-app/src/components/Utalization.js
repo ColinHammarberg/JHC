@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { ProblemAreas } from './ProblemAreas';
 import { OrganizationProblems } from '../constants/Constants';
 import { JhcContext } from '../context/JhcContext';
+import Image from '../images/Jonas-4.png';
 
 export const Utalization = () => {
     const navigate = useNavigate();
@@ -19,7 +20,7 @@ export const Utalization = () => {
         <div className="problem-utilization">
             <div className="content">
                 <div className="avatar">
-                    <Avatar />
+                    <Avatar image={Image} />
                 </div>
                 <div className="description">
                     What would you like to have help with?

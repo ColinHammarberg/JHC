@@ -1,10 +1,10 @@
 @import '../../fonts/fonts.scss';
 @import './utils/ResponsiveUtils.scss';
 
-@keyframes floatIn {
+@keyframes ease {
     0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(0%);
     }
 
     100% {
@@ -14,7 +14,7 @@
 }
 
 .welcome {
-    background-color: #fff;
+    background-color: #ffff;
     height: 100vh;
     display: flex;
     width: 100%;
@@ -28,20 +28,19 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            animation: floatIn 1s ease-in-out;
 
             img {
                 width: 200px;
-                height: 150px;
             }
         }
 
         .description {
-            font-size: 11px;
+            font-size: 16px;
             font-family: 'MediumLLWeb-Regular';
             font-weight: 500;
-            animation: floatIn 2s ease-in-out;
+            animation: ease 2s ease;
             text-align: center;
+            margin: auto;
         }
 
         .showcase {
@@ -51,12 +50,11 @@
             justify-content: center;
             text-align: center;
             margin-top: 20px;
-            animation: floatIn 3s ease-in-out;
+            animation: ease 3s ease;
 
             .showcase-company {
                 img {
-                    max-width: 180px;
-                    height: 40px;
+                    max-width: 100px;
                 }
             }
         }

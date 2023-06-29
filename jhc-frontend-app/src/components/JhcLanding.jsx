@@ -3,6 +3,7 @@ import { Avatar } from './Avatar';
 import TypingEffect from './TypingEffect';
 import { useNavigate } from 'react-router-dom';
 import './styles/JhcLanding.scss';
+import Image from '../images/Jonas-5.png';
 
 function JhcLanding() {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ function JhcLanding() {
     <div className={`home-container ${showBackgroundTransition ? ' transition' : ''}`}>
         <div className="landing-area">
           <div className="avatar">
-            <Avatar />
+            <Avatar image={Image} />
           </div>
           <div className="typing">
             <TypingEffect className={`${showBackgroundTransition ? ' transition' : ''}`}/>

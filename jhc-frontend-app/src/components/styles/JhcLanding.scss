@@ -37,11 +37,11 @@
         animation-duration: 0.8s;
     }
 
-    75% {
-        transform: translateY(-10%);
-        animation-timing-function: ease-out;
-        animation-duration: 1s;
-    }
+    // 75% {
+    //     transform: translateY(-10%);
+    //     animation-timing-function: ease-out;
+    //     animation-duration: 1s;
+    // }
 }
 
 .home-container {
@@ -65,12 +65,11 @@
         height: 400px;
 
         .avatar {
-            animation: drop-in 1.5s forwards, bounce 2.4s ease-in-out 1s 3;
+            animation: drop-in 1.5s forwards, bounce 2.2s ease-in-out 1s;
             position: relative;
 
             img {
                 width: 200px;
-                height: 150px;
             }
         }
 
@@ -84,7 +83,7 @@
                 //     transition: color 1s ease;
                 // }
                 span {
-                    font-family: 'MediumLLWeb-Bold';
+                    font-family: 'MediumLLWeb-Regular';
                 }
             }
         }

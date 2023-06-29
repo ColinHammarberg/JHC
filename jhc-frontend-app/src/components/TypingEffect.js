@@ -35,7 +35,7 @@ const TypingEffect = (props) => {
   return (
     <div className={`typing-effect ${className}`}>
         <div>
-            <span ref={textRef}></span>
+            <span ref={textRef} className="text"></span>
         </div>
         <div>
             <span ref={subTextRef} className="sub-text"></span>
