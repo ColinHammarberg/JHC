@@ -16,12 +16,13 @@
 .welcome {
     background-color: #ffff;
     height: 100vh;
-    display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
 
     .content {
+        margin-top: 200px;
+
         .avatar {
             margin: 0;
             display: flex;
@@ -67,6 +68,23 @@
             animation: floatIn 4s ease-in-out;
         }
     }
+
+    .scroll {
+        display: flex;
+        margin-top: 200px;
+        text-align: center;
+        justify-content: center;
+
+        .scrolling-btn {
+            img {
+                width: 75px;
+            }
+        }
+
+        .MuiSvgIcon-root {
+            font-size: 24px;
+        }
+    }
 }
 
 @include media(phone) {
@@ -81,6 +99,10 @@
                     margin-bottom: 40px;
                 }
             }
+        }
+
+        .scroll {
+            margin-top: 25px;
         }
     }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Avatar } from './Avatar';
 import './styles/Welcome.scss';
 import { ShowcaseCompany } from './ShowcaseCompany';
@@ -9,8 +9,10 @@ import Vattenfall from '../images/Vattenfall.png';
 // import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Image from '../images/Jonas-4.png';
+import { ScrollButton } from './ScrollButton';
 
 export const Welcome = () => {
+    const targetRef = useRef(null);
     const Images = [
         {
             key: 1,
@@ -25,6 +27,12 @@ export const Welcome = () => {
             source: Vattenfall
         },
     ]
+
+    const handleClick = () => {
+        if (targetRef.current) {
+          targetRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className="welcome">
@@ -43,9 +51,10 @@ export const Welcome = () => {
                         )
                     })}
                 </div>
-                {/* <div className="redirect-btn">
-                    <JhcButton onClick={handleOnClick} label="Enter Site" />
-                </div> */}
+            </div>
+            <div className="scroll">
+                <ScrollButton onClick={handleClick} />
+                {/* {showSpcePage && <JhcLanding ref={targetRef} />} */}
             </div>
         </div>
     )
