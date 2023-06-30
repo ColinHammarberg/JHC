@@ -10,6 +10,7 @@ import Vattenfall from '../images/Vattenfall.png';
 import Header from './Header';
 import Image from '../images/Jonas-4.png';
 import { ScrollButton } from './ScrollButton';
+import SpceLanding from './SpceLanding';
 
 export const Welcome = () => {
     const targetRef = useRef(null);
@@ -54,7 +55,9 @@ export const Welcome = () => {
             </div>
             <div className="scroll">
                 <ScrollButton onClick={handleClick} />
-                {/* {showSpcePage && <JhcLanding ref={targetRef} />} */}
+            </div>
+            <div className="spce-section">
+                <SpceLanding ref={targetRef} />
             </div>
         </div>
     )

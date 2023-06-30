@@ -1,0 +1,14 @@
+.spce-container {
+    height: 100vh;
+    .spce-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        .spce-logo {
+            img {
+                width: 150px;
+            }
+        }
+    }
+}

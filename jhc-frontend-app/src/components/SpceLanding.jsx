@@ -1,22 +1,17 @@
-import React from 'react';
-// import { useNavigate } from 'react-router-dom';
+import React, { forwardRef } from 'react';
 import './styles/SpceLanding.scss';
 import Spce from '../images/spce-logo.png';
 
-function SpceLanding() {
-//   const navigate = useNavigate();
-  // const [showLoading, setShowLoading] = useState(false);
-  // const [seconds, setSeconds] = useState();
-
+const SpceLanding = forwardRef((props, ref) => {
   return (
-    <div className={`spce-container`}>
-        <div className="spce-area">
-          <div className="spce-logo">
-            <img src={Spce} alt="" />
-          </div>
+    <div ref={ref} className="spce-container">
+      <div className="spce-area">
+        <div className="spce-logo">
+          <img src={Spce} alt="" />
         </div>
+      </div>
     </div>
   );
-}
+});
 
 export default SpceLanding;
