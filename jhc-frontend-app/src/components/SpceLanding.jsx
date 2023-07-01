@@ -4,7 +4,7 @@ import Spce from '../images/spce-logo.png';
 
 const SpceLanding = forwardRef((props, ref) => {
   return (
-    <div ref={ref} className="spce-container">
+    <div ref={ref} className={`spce-container`}>
       <div className="spce-area">
         <div className="spce-logo">
           <img src={Spce} alt="" />

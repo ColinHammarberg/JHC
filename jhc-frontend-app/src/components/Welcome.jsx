@@ -14,6 +14,22 @@ import SpceLanding from './SpceLanding';
 
 export const Welcome = () => {
     const targetRef = useRef(null);
+    // const [hasScrolled, setHasScrolled] = React.useState(false);
+    // React.useEffect(() => {
+    //     const handleScroll = () => {
+    //       if (window.scrollY > 0) {
+    //         setHasScrolled(true);
+    //       } else {
+    //         setHasScrolled(false);
+    //       }
+    //     };
+      
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //       window.removeEventListener('scroll', handleScroll);
+    //     };
+    //   }, []);
+      
     const Images = [
         {
             key: 1,
