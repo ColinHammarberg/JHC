@@ -34,7 +34,7 @@ function JhcLanding() {
       setShowBackgroundTransition(true);
       setTimeout(() => {
         // navigate('/welcome');
-        navigate(`${process.env.REACT_APP_BASEURL}/welcome` );
+        navigate(`/welcome` );
       }, 1500);
     }, 8000);
 

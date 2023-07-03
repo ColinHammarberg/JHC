@@ -1,14 +1,49 @@
+@import './utils/ResponsiveUtils.scss';
+@import '../../fonts/fonts.scss';
+
+@keyframes ease {
+    0% {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .spce-container {
     height: 100vh;
+
     .spce-area {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
         height: 100vh;
+
         .spce-logo {
+            margin: auto;
+            margin-bottom: 40px;
+            animation: ease 6s ease;;
+
             img {
                 width: 150px;
             }
         }
+
+        .spce-description {
+            text-align: center;
+
+            span {
+                font-family: 'MediumLLWeb-Regular';
+                font-weight: 500;
+                animation: ease 6s ease;
+            }
+        }
+    }
+}
+
+@include media(phone) {
+    .spce-container {
+        padding: 20px;
     }
 }

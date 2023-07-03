@@ -14,6 +14,7 @@ import SpceLanding from './SpceLanding';
 
 export const Welcome = () => {
     const targetRef = useRef(null);
+    const [ showSpceLanding, setShowSpceLanding ] = React.useState(false);
     // const [hasScrolled, setHasScrolled] = React.useState(false);
     // React.useEffect(() => {
     //     const handleScroll = () => {
@@ -45,7 +46,8 @@ export const Welcome = () => {
         },
     ]
 
-    const handleClick = () => {
+    const handleClick = async () => {
+        await setShowSpceLanding(true);
         if (targetRef.current) {
           targetRef.current.scrollIntoView({ behavior: 'smooth' });
         }
@@ -73,7 +75,7 @@ export const Welcome = () => {
                 <ScrollButton onClick={handleClick} />
             </div>
             <div className="spce-section">
-                <SpceLanding ref={targetRef} />
+                {showSpceLanding && <SpceLanding ref={targetRef} />}
             </div>
         </div>
     )
