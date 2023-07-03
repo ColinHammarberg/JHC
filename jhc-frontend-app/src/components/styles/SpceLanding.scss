@@ -15,6 +15,7 @@
 
 .spce-container {
     height: 100vh;
+    background-color: #000;
 
     .spce-area {
         display: grid;
@@ -26,7 +27,7 @@
             animation: ease 6s ease;;
 
             img {
-                width: 150px;
+                width: 200px;
             }
         }
 
@@ -37,6 +38,7 @@
                 font-family: 'MediumLLWeb-Regular';
                 font-weight: 500;
                 animation: ease 6s ease;
+                color: #fff;
             }
         }
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import './styles/Menu.scss';
@@ -9,6 +10,7 @@ export const Menu = (props) => {
     function handleOnClick(item) {
         props.handleOnClickMenuItem(item.navigation);
     }
+    console.log('isMobile', isMobile);
     return (
         <div>
             {!props.isOpen ? (
@@ -29,8 +31,8 @@ export const Menu = (props) => {
                             {menuItems.map((item) => (
                                 <Button
                                     key={item.key}
+                                    className={`menu-item ${!isMobile && item.className}`}
                                     onClick={() => handleOnClick(item)}
-                                    className="menu-item"
                                 >
                                     {item.title}
                                 </Button>

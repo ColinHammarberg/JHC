@@ -32,25 +32,30 @@ export const menuItems = [
         key: 1,
         navigation: 'customercases',
         title: "Usecases",
+        className: 'usecases'
     },
     {
         key: 2,
         navigation: 'utalization',
         title: 'Request Help',
+        className: 'help'
     },
     {
         key: 3,
         navigation: 'actions',
         title: 'Book Jonas',
+        className: 'actions'
     },
     {
         key: 4,
         navigation: 'about',
         title: 'About Jonas',
+        className: 'about'
     },
     {
         key: 5,
         navigation: '',
         title: 'Books',
+        className: 'books'
     },
 ]
