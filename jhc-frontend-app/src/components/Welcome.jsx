@@ -47,7 +47,7 @@ export const Welcome = () => {
     ]
 
     const handleClick = async () => {
-        await setShowSpceLanding(true);
+        await setShowSpceLanding(!showSpceLanding);
         if (targetRef.current) {
           targetRef.current.scrollIntoView({ behavior: 'smooth' });
         }
@@ -72,7 +72,7 @@ export const Welcome = () => {
                 </div>
             </div>
             <div className="scroll">
-                <ScrollButton onClick={handleClick} />
+                <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
             </div>
             <div className="spce-section">
                 {showSpceLanding && <SpceLanding ref={targetRef} />}

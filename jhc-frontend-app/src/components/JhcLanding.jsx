@@ -13,11 +13,9 @@ function JhcLanding() {
 
   // function beginCountDown(seconds) {
   //   let counter = seconds;
-
   //   const interval = setInterval(() => {
   //     counter--;
   //     setSeconds(counter);
-
   //     if (counter < 0) {
   //       clearInterval(interval);
   //     }
@@ -34,7 +32,7 @@ function JhcLanding() {
       setShowBackgroundTransition(true);
       setTimeout(() => {
         // navigate('/welcome');
-        navigate(`${process.env.REACT_APP_BASEURL}/welcome` );
+        navigate(`${process.env.REACT_APP_BASEURL}/welcome`);
       }, 1500);
     }, 8000);
 
