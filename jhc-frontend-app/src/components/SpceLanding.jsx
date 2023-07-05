@@ -13,7 +13,7 @@ const SpceLanding = forwardRef((props, ref) => {
         <div className="spce-description">
           <span>
             SP_CE offers digital rooms where you can safely invite people, share content and collaborate. <br></br>
-            All while earning actionable insights about your buyers’ journey
+            All while earning actionable insights about your buyers’ journey. Click <a href="https://www.spce.com" rel="noreferrer" target="_blank">here</a> to read more.
           </span>
       </div>
       </div>
