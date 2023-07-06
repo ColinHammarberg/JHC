@@ -29,15 +29,11 @@
             color: #fff;
             font-family: 'F37Judge-MediumCondensed';
 
+
             .space {
                 animation: ease 6s ease;
-            }
-
-            .space::before {
                 content: '';
                 width: 0.2em;
-                height: 1px;
-                background-color: black;
                 display: inline-block;
             }
         }

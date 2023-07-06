@@ -16,13 +16,11 @@ const SpceLanding = forwardRef((props, ref) => {
     <div ref={ref} className="spce-container">
       <div className="spce-area">
         <div className="spce-logo">
-        <div className={`spce-logo ${showSpace ? 'space' : ''}`}>
           <span>S</span>
           <span>P</span>
           {showSpace && <span className="space"> </span>}
           <span>C</span>
           <span>E</span>
-        </div>
         </div>
         <div className="spce-description">
           <span>
