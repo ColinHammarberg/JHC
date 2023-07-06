@@ -24,10 +24,21 @@
         .spce-logo {
             margin: auto;
             margin-bottom: 40px;
-            animation: ease 6s ease;;
+            animation: ease 6s ease;
+            font-size: 80px;
+            color: #fff;
+            font-family: 'F37Judge-MediumCondensed';
 
-            img {
-                width: 200px;
+            .space {
+                animation: ease 6s ease;
+            }
+
+            .space::before {
+                content: '';
+                width: 0.2em;
+                height: 1px;
+                background-color: black;
+                display: inline-block;
             }
         }
 
@@ -39,6 +50,7 @@
                 font-weight: 500;
                 animation: ease 6s ease;
                 color: #fff;
+
                 a {
                     color: #D381F5;
                 }
@@ -48,7 +60,7 @@
 }
 
 @include media(phone) {
-    .spce-container { 
+    .spce-container {
         padding: 20px;
     }
 }

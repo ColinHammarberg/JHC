@@ -1,14 +1,28 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import './styles/SpceLanding.scss';
 // import Spce from '../images/spce-logo.png';
-import Image from '../images/spce-small.svg'
 
 const SpceLanding = forwardRef((props, ref) => {
+  const [showSpace, setShowSpace] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSpace(true);
+    }, [2000]);
+    return () => {
+      clearTimeout(timer);
+    }
+  })
   return (
     <div ref={ref} className="spce-container">
       <div className="spce-area">
         <div className="spce-logo">
-          <img src={Image} alt="" />
+        <div className={`spce-logo ${showSpace ? 'space' : ''}`}>
+          <span>S</span>
+          <span>P</span>
+          {showSpace && <span className="space"> </span>}
+          <span>C</span>
+          <span>E</span>
+        </div>
         </div>
         <div className="spce-description">
           <span>
