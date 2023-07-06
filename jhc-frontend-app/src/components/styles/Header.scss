@@ -1,3 +1,5 @@
+@import './utils/ResponsiveUtils.scss';
+
 .header {
     display: flex;
     height: 40px;
@@ -20,6 +22,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        width: 100%;
     }
 
     .back-button {
@@ -36,3 +39,9 @@
         }
     }
 }
+
+// @include media(phone) {
+//     .header .opened-menu {
+//         width: unset;
+//     }
+// }

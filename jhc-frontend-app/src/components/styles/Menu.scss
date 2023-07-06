@@ -51,7 +51,7 @@
     background-color: #000;
     animation: slide 1s ease-out;
     height: 100vh;
-    width: 176vh;
+    width: 100%;
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
 
     .close-btn {
@@ -86,7 +86,7 @@
                 font-family: 'MediumLLWeb-Regular';
                 font-weight: 700;
                 float: none;
-                animation: floatItemsWeb 5s infinite alternate;
+                animation: floatItemsWeb 5s;
 
                 &:hover {
                     color: #D381F5;
@@ -103,7 +103,6 @@
 
 @include media(phone) {
     .opened-menu-item {
-        width: 300px;
         height: 100vh;
         background-color: #000;
         animation: slide 1s ease-out;
@@ -111,8 +110,8 @@
         clip-path: unset;
 
         .menu {
-            display: flex;
-            justify-content: right;
+            width: 100%;
+            justify-content: center;
 
             .menu-items {
                 text-align: left;
@@ -125,7 +124,7 @@
                     font-family: 'MediumLLWeb-Regular';
                     font-weight: 700;
                     float: none;
-                    animation: floatItemsMobile 3s infinite alternate;
+                    animation: floatItemsMobile 3s;
 
                     &:hover {
                         color: #D381F5;
