@@ -31,8 +31,8 @@ function JhcLanding() {
     const timeoutRedirect = setTimeout(() => {
       setShowBackgroundTransition(true);
       setTimeout(() => {
-        // navigate('/welcome');
-        navigate(`${process.env.REACT_APP_BASEURL}/welcome`);
+        navigate('/welcome');
+        // navigate(`${process.env.REACT_APP_BASEURL}/welcome`);
       }, 1500);
     }, 8000);
 
