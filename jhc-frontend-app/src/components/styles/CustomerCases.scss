@@ -1,0 +1,56 @@
+.video-container {
+    display: flex;
+    height: 100vh;
+
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+        margin-top: 150px;
+
+        .video-wrapper {
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 0 1px #fff;
+
+            &.video-1 {
+                height: 50%;
+                flex-basis: 35%;
+            }
+
+            &.video-2 {
+                height: 50%;
+                flex-basis: 65%;
+            }
+
+            &.video-3 {
+                height: 50%;
+                flex-basis: 65%;
+            }
+
+            &.video-4 {
+                height: 50%;
+                flex-basis: 35%;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover 50% 50%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+
+        }
+    }
+}

@@ -10,7 +10,6 @@ export const Menu = (props) => {
     function handleOnClick(item) {
         props.handleOnClickMenuItem(item.navigation);
     }
-    console.log('isMobile', isMobile);
     return (
         <div>
             {!props.isOpen ? (

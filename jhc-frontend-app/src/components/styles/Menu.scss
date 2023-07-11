@@ -18,7 +18,7 @@
     }
 
     50% {
-        transform: translateX(-800px);
+        transform: translateX(-250px);
     }
 
     100% {
@@ -85,6 +85,7 @@
                 float: right;
                 font-family: 'MediumLLWeb-Regular';
                 font-weight: 700;
+                justify-content: right;
                 float: none;
                 animation: floatItemsWeb 5s;
 
