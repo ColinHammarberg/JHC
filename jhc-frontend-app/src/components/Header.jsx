@@ -26,7 +26,7 @@ function Header(props) {
                 <BackButton />
                 <span>{props.pageName}</span>
             </div>
-    </div>
+        </div>
     )
 }
 
