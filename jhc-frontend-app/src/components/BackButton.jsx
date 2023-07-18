@@ -7,6 +7,7 @@ function BackButton() {
     const navigate = useNavigate();
     function handleOnClickBack() {
         navigate(-1);
+        console.log('navigate', navigate);
     }
 
     return (
