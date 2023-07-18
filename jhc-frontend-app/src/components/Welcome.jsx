@@ -55,7 +55,7 @@ export const Welcome = () => {
 
     return (
         <div className="welcome">
-           <Header />
+           <Header pageName="Overview" />
             <div className="content">
                 <div className="avatar">
                     <Avatar image={Image} />

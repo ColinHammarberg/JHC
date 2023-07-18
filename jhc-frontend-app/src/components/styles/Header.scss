@@ -31,11 +31,17 @@
         left: 40px;
 
         .MuiIconButton-root {
+            margin-right: 16px;
             &:hover {
                 .MuiSvgIcon-root {
                     color: #000;
                 }
             }
+        }
+        span {
+            font-size: 16px;
+            font-family: 'MediumLLWeb-Regular';
+            font-weight: 700;
         }
     }
 }

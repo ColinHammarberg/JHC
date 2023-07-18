@@ -4,7 +4,7 @@ import './styles/Header.scss';
 import { Menu } from './Menu';
 import { useNavigate } from 'react-router-dom';
 
-function Header() {
+function Header(props) {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
     const handleOpenMenu = () => {
@@ -24,6 +24,7 @@ function Header() {
             </div>
             <div className="back-button">
                 <BackButton />
+                <span>{props.pageName}</span>
             </div>
     </div>
     )

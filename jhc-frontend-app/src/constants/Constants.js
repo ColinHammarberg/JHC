@@ -31,7 +31,7 @@ export const menuItems = [
     {
         key: 1,
         navigation: 'customercases',
-        title: "Use-cases",
+        title: "Inspiration",
         className: 'usecases'
     },
     {

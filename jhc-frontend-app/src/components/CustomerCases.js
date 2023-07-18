@@ -3,29 +3,30 @@ import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite
 import './styles/CustomerCases.scss';
 import Header from './Header';
 import Image from '../images/jonas.jpeg';
+import Urs from '../images/Urs-thumbnail.png';
 
 const videoData = [
   {
-    src: 'https://www.youtube.com/embed/video1?autoplay=1',
+    src: 'https://www.youtube.com/embed/SS7N2xBCw2U',
     thumbnail: Image,
     alt: 'Thumbnail 1',
     className: 'video-1'
   },
   {
-    src: 'https://www.youtube.com/embed/video2?autoplay=1',
+    src: 'https://www.youtube.com/embed/wG7ff8obtRo',
     thumbnail: Image,
     alt: 'Thumbnail 2',
     className: 'video-2'
   },
   {
-    src: 'https://www.youtube.com/embed/video3?autoplay=1',
+    src: 'https://www.youtube.com/embed/vyVMXrDekj0',
     thumbnail: Image,
     alt: 'Thumbnail 3',
     className: 'video-3'
   },
   {
-    src: 'https://www.youtube.com/embed/video4?autoplay=1',
-    thumbnail: Image,
+    src: 'https://youtube.com/embed/DZxaV_15EPM',
+    thumbnail: Urs,
     alt: 'Thumbnail 4',
     className: 'video-4'
   }
@@ -40,7 +41,7 @@ function CustomerCases() {
 
   return (
     <div className="video-container">
-      <Header />
+      <Header pageName="Inspiration" />
       <div className="videos">
         {videoData.map((video, index) => (
           <div className={`video-wrapper ${video.className}`} key={index}>
