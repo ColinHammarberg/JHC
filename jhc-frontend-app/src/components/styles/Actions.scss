@@ -2,50 +2,17 @@
     height: 100vh;
     border-left: #D381F5 25px solid;
 
-    .avatar {
-        width: 300px;
-        margin: auto;
-        margin-bottom: 100px;
-        padding-top: 60px;
-    }
-
     .action-options {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50px;
 
-        .divider {
-            width: 5px;
-            height: 180px;
-            background-color: #D381F5;
-        }
+        .meetings-iframe-container {
+            width: 500px;
+            margin-top: 140px;
 
-        .schedule-meeting {
-            .MuiButton-root {
-                width: 100px;
-                height: 100px;
-                align-items: center;
-                justify-content: center;
-                color: #000;
-
-                .MuiSvgIcon-root {
-                    font-size: 100px;
-                }
-            }
-        }
-
-        .how-it-works {
-            .MuiButton-root {
-                width: 100px;
-                height: 100px;
-                align-items: center;
-                justify-content: center;
-                color: #000;
-
-                .MuiSvgIcon-root {
-                    font-size: 100px;
-                }
+            .ColoredCard__ColoredCardSection-sc-1p64xd6-0 {
+                background-color: #000 !important;
             }
         }
     }

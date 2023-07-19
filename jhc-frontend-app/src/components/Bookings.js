@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/Bookings.scss';
-import CalendyWidget from './CalendyWidget';
 import { Avatar } from './Avatar';
+import MeetingsEmbed from './MeetingEmbeded';
 
 export const Bookings = () => {
 
@@ -10,8 +10,8 @@ export const Bookings = () => {
             <div className="avatar">
                 <Avatar />
             </div>
-            <div className="calendy">
-                <CalendyWidget />
+            <div className="hubspot">
+                <MeetingsEmbed />
             </div>
         </div>
     )
