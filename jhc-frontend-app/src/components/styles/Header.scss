@@ -6,7 +6,7 @@
 
     .closed-menu {
         position: absolute;
-        top: 40px;
+        top: 33px;
         right: 40px;
 
         .MuiIconButton-root {
@@ -32,12 +32,14 @@
 
         .MuiIconButton-root {
             margin-right: 16px;
+
             &:hover {
                 .MuiSvgIcon-root {
                     color: #000;
                 }
             }
         }
+
         span {
             font-size: 16px;
             font-family: 'MediumLLWeb-Regular';
