@@ -5,8 +5,8 @@ import { Utalization } from './components/Utalization';
 import JhcContextProvider from './context/JhcContext';
 import { Actions } from './components/Actions';
 import { Bookings } from './components/Bookings';
-import CustomerCases from './components/CustomerCases';
 import SpceLanding from './components/SpceLanding';
+import VideoCases from './components/VideoCases';
 
 function App() {
   console.log("app", process.env.REACT_APP_BASEURL);
@@ -36,8 +36,8 @@ function App() {
               element={<Bookings />}
             />
             <Route
-              path={`${process.env.REACT_APP_BASEURL}/customercases`}
-              element={<CustomerCases />}
+              path={`${process.env.REACT_APP_BASEURL}/videocases`}
+              element={<VideoCases />}
             />
             <Route
               path={`${process.env.REACT_APP_BASEURL}/spce`}

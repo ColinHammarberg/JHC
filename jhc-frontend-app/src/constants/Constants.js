@@ -30,7 +30,7 @@ export const OrganizationProblems = [
 export const menuItems = [
     {
         key: 1,
-        navigation: 'customercases',
+        navigation: 'videocases',
         title: "Inspiration",
         className: 'usecases'
     },

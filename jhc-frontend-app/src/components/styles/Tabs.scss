@@ -1,0 +1,103 @@
+.tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 0;
+    margin-left: 24px;
+    height: 50px;
+    margin-top: 100px;
+  
+    .tab-item {
+      list-style: disc;
+      color: transparent;
+      font-size: 15px;
+      border-radius: 4px;
+      background-color: #222228;
+      cursor: pointer;
+      opacity: 0.8;
+  
+      &.active {
+        opacity: 1;
+        font-weight: bold;
+        background-color: rgba(219, 225, 227, 0.2);
+      }
+      &-hidden {
+        display: none;
+      }
+  
+      .tab-wrapper {
+        padding: 8px 12px;
+        color: #fff;
+      }
+  
+      &:hover {
+        opacity: 1;
+        font-weight: bold;
+      }
+      .MuiBadge-root {
+        margin-left: 12px;
+      }
+    }
+  
+    &.light {
+      .tab-item{
+        background-color: #fff;
+        border: 1px solid #DBE1E3;
+        tab-wrapper {
+          color: rgba(0, 0, 0, 0.6);
+        }
+        &.active {
+          background-color: #000;
+          color: #fff;
+          .tab-wrapper {
+            color: #fff;
+          }
+        }
+  
+      }
+  
+    }
+    &.tabs-level-2 {
+      padding: 0;
+      gap: 24px;
+      display: flex;
+      border-bottom: 1px solid #ECEEEF;
+      padding: 8px 24px 0;
+      margin: 0;
+  
+      .tab-item{
+        background-color: transparent;
+         .tab-wrapper {
+          background-color: transparent;
+          color: rgba(0, 0, 0, 0.6);
+          padding: 0;
+          min-height: 32px;
+          font-family: "MediumLLWeb-Regular";
+        }
+        &.active .tab-wrapper {
+          color: #000;
+          border-bottom: 2px solid #000;
+          font-family: "MediumLLWeb-Bold";
+        }
+        &:hover .tab-wrapper {
+          color: #000;
+        }
+      }
+  
+    }
+  
+    &.tabs-level-2.dark {
+      background-color: #000;
+      border-bottom: 1px solid rgba(219, 225, 227, 0.2);
+      .tab-item {
+        .tab-wrapper {
+          color: rgba(255, 255, 255, 0.6);
+        }
+        &.active .tab-wrapper, &:hover .tab-wrapper  {
+          color: #fff;
+        }
+      }
+    }
+  }
+  
