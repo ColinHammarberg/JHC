@@ -15,8 +15,8 @@ function Header(props) {
         setIsOpen(false);
     };
     function handleOnClickMenuItem (navigation) {
-        // navigate(`/${navigation}` );
-        navigate(`${process.env.REACT_APP_BASEURL}/${navigation}` );
+        // navigate(`/${navigation}`);
+        navigate(`${process.env.REACT_APP_BASEURL}/${navigation}`);
     }
     return (
         <div className="header">
