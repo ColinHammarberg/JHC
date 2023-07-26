@@ -51,25 +51,29 @@
             text-align: center;
             justify-content: center;
             align-items: center;
+            background-color: #D8DFE9;
+            width: 100%;
+            height: 100%;
+            border: 4px solid #fff;
 
-            .video-thumbnail {
-                position: absolute;
-                top: 0;
-                background-color: #000;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border: 4px solid #fff;
-            }
-
-            .MuiSvgIcon-root {
+            .thumbnail-wrapper {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                color: #fff;
-                font-size: 50px;
-                cursor: pointer;
+                width: 50%;
+                height: 50%;
+
+                .video-thumbnail {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .text {
+                    font-family: 'MediumLLWeb-Regular';
+                    font-weight: 700;
+                }
             }
         }
     }
