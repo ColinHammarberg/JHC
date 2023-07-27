@@ -92,12 +92,12 @@ export const Welcome = () => {
                   return <ShowcaseCompany item={item} />;
                 })}
               </div>
+              <div className="scroll">
+                {!showSpceLanding && (
+                  <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
+                )}
+              </div>
             </div>
-          </div>
-          <div className="scroll">
-            {!showSpceLanding && (
-              <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
-            )}
           </div>
         </>
       )}

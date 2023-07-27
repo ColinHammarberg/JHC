@@ -21,9 +21,7 @@
     justify-content: center;
 
     .content {
-        margin-top: 100px;
         display: flex;
-
         .content-left {
             img {
                 height: 1000px;
@@ -57,25 +55,24 @@
                     }
                 }
             }
-        }
-    }
-
-    .scroll {
-        display: flex;
-        margin-top: 160px;
-        text-align: center;
-        justify-content: center;
-
-        .scrolling-btn {
-            animation: ease 3s ease;
-
-            img {
-                width: 75px;
+            .scroll {
+                display: flex;
+                margin-top: 60px;
+                text-align: center;
+                justify-content: center;
+        
+                .scrolling-btn {
+                    animation: ease 3s ease;
+        
+                    img {
+                        width: 75px;
+                    }
+                }
+        
+                .MuiSvgIcon-root {
+                    font-size: 24px;
+                }
             }
-        }
-
-        .MuiSvgIcon-root {
-            font-size: 24px;
         }
     }
 }
@@ -94,6 +91,7 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 20px;
+
                 img {
                     width: 200px;
                 }
@@ -108,7 +106,7 @@
                 margin: auto;
                 width: 350px;
             }
-    
+
             .showcase {
                 display: block;
                 gap: 40px;
@@ -117,9 +115,10 @@
                 text-align: center;
                 margin-top: 20px;
                 animation: ease 3s ease;
-    
+
                 .showcase-company {
                     margin-bottom: 40px;
+
                     img {
                         max-width: 100px;
                     }
@@ -132,7 +131,22 @@
         }
 
         .scroll {
-            margin-top: 25px;
+            display: flex;
+            margin-top: 60px;
+            text-align: center;
+            justify-content: center;
+    
+            .scrolling-btn {
+                animation: ease 3s ease;
+    
+                img {
+                    width: 75px;
+                }
+            }
+    
+            .MuiSvgIcon-root {
+                font-size: 24px;
+            }
         }
     }
 }
