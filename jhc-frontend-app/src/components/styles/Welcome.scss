@@ -21,49 +21,42 @@
     justify-content: center;
 
     .content {
-        margin-top: 180px;
-        .avatar {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
+        margin-top: 100px;
+        display: flex;
+
+        .content-left {
             img {
-                width: 200px;
+                height: 1000px;
+                width: 980px;
             }
         }
 
-        .description {
-            font-size: 16px;
-            font-family: 'MediumLLWeb-Regular';
-            font-weight: 500;
-            animation: ease 2s ease;
-            text-align: center;
-            margin: auto;
-        }
+        .content-right {
+            .description {
+                font-size: 16px;
+                font-family: 'MediumLLWeb-Regular';
+                font-weight: 500;
+                animation: ease 2s ease;
+                text-align: center;
+                margin: auto;
+                margin-top: 200px;
+            }
 
-        .showcase {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-top: 20px;
-            animation: ease 3s ease;
+            .showcase {
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-top: 20px;
+                animation: ease 3s ease;
 
-            .showcase-company {
-                img {
-                    max-width: 100px;
+                .showcase-company {
+                    img {
+                        max-width: 100px;
+                    }
                 }
             }
-        }
-
-        .redirect-btn {
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            margin-top: 20px;
-            animation: floatIn 4s ease-in-out;
         }
     }
 
@@ -74,7 +67,8 @@
         justify-content: center;
 
         .scrolling-btn {
-            animation: ease 3s ease ;
+            animation: ease 3s ease;
+
             img {
                 width: 75px;
             }
@@ -94,11 +88,41 @@
             justify-content: center;
             display: grid;
 
+            .avatar {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                img {
+                    width: 200px;
+                }
+            }
+
+            .description {
+                font-size: 16px;
+                font-family: 'MediumLLWeb-Regular';
+                font-weight: 500;
+                animation: ease 2s ease;
+                text-align: center;
+                margin: auto;
+                width: 350px;
+            }
+    
             .showcase {
                 display: block;
-
+                gap: 40px;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-top: 20px;
+                animation: ease 3s ease;
+    
                 .showcase-company {
                     margin-bottom: 40px;
+                    img {
+                        max-width: 100px;
+                    }
                 }
             }
 

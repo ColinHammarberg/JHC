@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { isMobile } from 'react-device-detect';
 import { Avatar } from './Avatar';
 import './styles/Welcome.scss';
 import { ShowcaseCompany } from './ShowcaseCompany';
@@ -9,6 +10,7 @@ import Header from './Header';
 import Image from '../images/Jonas-4.png';
 import { ScrollButton } from './ScrollButton';
 import SpceLanding from './SpceLanding';
+import JonasInAction from '../images/Jonas-in-action.png';
 
 export const Welcome = () => {
   const targetRef = useRef(null);
@@ -54,24 +56,52 @@ export const Welcome = () => {
   return (
     <div className="welcome">
       <Header pageName="Overview" />
-      <div className="content">
-        <div className="avatar">
-          <Avatar image={Image} />
+      {isMobile ? (
+        <>
+          <div className="content">
+          <div className="avatar">
+            <Avatar image={Image} />
+          </div>
+          <div className="description">
+            Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
+          </div>
+          <div className="showcase">
+            {Images.map((item) => {
+              return <ShowcaseCompany item={item} />;
+            })}
+          </div>
         </div>
-        <div className="description">
-          Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
-        </div>
-        <div className="showcase">
-          {Images.map((item) => {
-            return <ShowcaseCompany item={item} />;
-          })}
-        </div>
-      </div>
-        <div className="scroll">
-        {!showSpceLanding && (
-          <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
-        )}
-        </div>
+          <div className="scroll">
+          {!showSpceLanding && (
+            <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
+          )}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="content">
+            <div className="content-left">
+              <img src={JonasInAction} alt=""/>
+            </div>
+            <div className="content-right">
+              <div className="description">
+                Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
+              </div>
+              <div className="showcase">
+                {Images.map((item) => {
+                  return <ShowcaseCompany item={item} />;
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="scroll">
+            {!showSpceLanding && (
+              <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
+            )}
+          </div>
+        </>
+      )}
+      
       <div className="spce-section">
         {showSpceLanding && <SpceLanding ref={targetRef} />}
       </div>
