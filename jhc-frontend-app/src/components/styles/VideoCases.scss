@@ -1,3 +1,5 @@
+@import './utils/ResponsiveUtils.scss';
+
 .video-container {
     display: grid;
     height: 100vh;
@@ -61,19 +63,66 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
                 width: 50%;
                 height: 50%;
 
-                .video-thumbnail {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                .box-button {
+                    width: 200px;
+                    height: 200px;
+                    background-color: rgba(216, 223, 233, 1);
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow:
+                        0px 4px 6px rgba(0, 0, 0, 0.1),
+                        0px 10px 20px rgba(0, 0, 0, 0.15);
+
+                    img {
+                        width: 80%;
+                        height: auto;
+                    }
                 }
 
                 .text {
                     font-family: 'MediumLLWeb-Regular';
                     font-weight: 700;
                 }
+            }
+        }
+    }
+}
+
+
+@include media(phone) {
+    .video-container {
+        .videos {
+            display: grid;
+
+            .video-wrapper.video-1 {
+                height: 100%;
+
+                .image-thumbnail {
+                    .thumbnail-wrapper {
+                        // .video-thumbnail {
+                        //     width: 65%;
+                        // }
+                    }
+                }
+            }
+
+            .video-wrapper.video-2 {
+                height: 100%;
+            }
+
+            .video-wrapper.video-3 {
+                height: 100%;
+            }
+
+            .video-wrapper.video-4 {
+                height: 100%;
             }
         }
     }
