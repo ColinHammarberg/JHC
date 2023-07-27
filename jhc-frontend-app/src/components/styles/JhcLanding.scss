@@ -45,7 +45,7 @@
 }
 
 .home-container {
-    background-color: #000000;
+    background-color: rgba(216, 223, 233, 1);
     height: 100vh;
     width: 100%;
     display: inline-grid;
@@ -53,40 +53,13 @@
     justify-content: center;
 
     &.transition {
-        background-color: white;
-        transition: background-color 4s ease;
-
-        .landing-area {
-            display: none;
-        }
+        background-color: rgba(255, 255, 255, 1);
     }
 
-    .landing-area {
-        height: 400px;
-
-        .avatar {
-            animation: drop-in 1.5s forwards, bounce 2.2s ease-in-out 1s;
-            position: relative;
-            margin-bottom: 20px;
-
-            img {
-                width: 200px;
-            }
-        }
-
-        .typing {
-            text-align: center;
-
-            .typing-effect {
-
-                // &.transition {
-                //     color: #000;
-                //     transition: color 1s ease;
-                // }
-                span {
-                    font-family: 'MediumLLWeb-Regular';
-                }
-            }
+    .landing-image {
+        img {
+            width: 980px;
+            height: 910px;
         }
     }
 

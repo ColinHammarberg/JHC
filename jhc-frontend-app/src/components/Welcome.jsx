@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { isMobile } from 'react-device-detect';
 import { Avatar } from './Avatar';
 import './styles/Welcome.scss';
@@ -53,6 +55,14 @@ export const Welcome = () => {
     }
   };
 
+  const handleOnClickBack = () => {
+    return;
+  }
+
+  const handleOnClickForward = () => {
+    return;
+  }
+
   return (
     <div className="welcome">
       <Header pageName="Overview" />
@@ -66,9 +76,11 @@ export const Welcome = () => {
             Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
           </div>
           <div className="showcase">
-            {Images.map((item) => {
-              return <ShowcaseCompany item={item} />;
-            })}
+            <ArrowLeftIcon />
+              {Images.map((item) => {
+                return <ShowcaseCompany item={item} />;
+              })}
+            <ArrowRightIcon />
           </div>
         </div>
           <div className="scroll">
@@ -88,9 +100,11 @@ export const Welcome = () => {
                 Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
               </div>
               <div className="showcase">
+                <ArrowLeftIcon onClick={handleOnClickBack} />
                 {Images.map((item) => {
                   return <ShowcaseCompany item={item} />;
                 })}
+                <ArrowRightIcon onClick={handleOnClickForward} />
               </div>
               <div className="scroll">
                 {!showSpceLanding && (

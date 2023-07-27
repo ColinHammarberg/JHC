@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Avatar } from './Avatar';
-import TypingEffect from './TypingEffect';
 import { useNavigate } from 'react-router-dom';
 import './styles/JhcLanding.scss';
-import Image from '../images/Jonas-5.png';
+import JonasInAction from '../images/Jonas-in-action.png';
+import Header from './Header';
 
 function JhcLanding() {
   const navigate = useNavigate();
@@ -23,34 +22,30 @@ function JhcLanding() {
   // }
 
   useEffect(() => {
-    // const timeoutCountDown = setTimeout(() => {
-    //   setShowLoading(true);
-    //   beginCountDown(4);
-    // }, 9000);
-
     const timeoutRedirect = setTimeout(() => {
       setShowBackgroundTransition(true);
-      setTimeout(() => {
-        // navigate('/welcome');
-        navigate(`${process.env.REACT_APP_BASEURL}/welcome`);
-      }, 1500);
-    }, 8000);
+      const redirectTimeout = setTimeout(() => {
+        navigate(`/welcome`);
+      }, 2000);
+
+      return () => {
+        // Clear both timeouts if the component unmounts before they execute
+        clearTimeout(timeoutRedirect);
+        clearTimeout(redirectTimeout);
+      };
+    }, 4000);
 
     return () => {
-      // clearTimeout(timeoutCountDown);
+      // Clear the outer timeout if the component unmounts before it executes
       clearTimeout(timeoutRedirect);
     };
   }, [navigate]);
 
   return (
     <div className={`home-container ${showBackgroundTransition ? ' transition' : ''}`}>
-        <div className="landing-area">
-          <div className="avatar">
-            <Avatar image={Image} />
-          </div>
-          <div className="typing">
-            <TypingEffect className={`${showBackgroundTransition ? ' transition' : ''}`}/>
-          </div>
+      <Header />
+        <div className="landing-image">
+          <img src={JonasInAction} alt=""/>
         </div>
     </div>
   );
