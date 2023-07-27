@@ -25,11 +25,10 @@ function JhcLanding() {
     const timeoutRedirect = setTimeout(() => {
       setShowBackgroundTransition(true);
       const redirectTimeout = setTimeout(() => {
-        navigate(`/welcome`);
+        navigate(`${process.env.REACT_APP_BASEURL}/welcome`);
       }, 2000);
 
       return () => {
-        // Clear both timeouts if the component unmounts before they execute
         clearTimeout(timeoutRedirect);
         clearTimeout(redirectTimeout);
       };
@@ -43,7 +42,9 @@ function JhcLanding() {
 
   return (
     <div className={`home-container ${showBackgroundTransition ? ' transition' : ''}`}>
-      <Header />
+      <div className="header-container">
+        <Header />
+      </div>
         <div className="landing-image">
           <img src={JonasInAction} alt=""/>
         </div>

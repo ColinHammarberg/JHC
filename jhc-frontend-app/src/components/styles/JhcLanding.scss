@@ -48,15 +48,27 @@
     background-color: rgba(216, 223, 233, 1);
     height: 100vh;
     width: 100%;
-    display: inline-grid;
+    display: block;
     align-items: center;
     justify-content: center;
+
+    .header-container {
+        height: 120px;
+        width: 100%;
+        .header {
+            height: 120px;
+            background-color: #fff;
+        }
+    }
 
     &.transition {
         background-color: rgba(255, 255, 255, 1);
     }
 
     .landing-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             width: 980px;
             height: 910px;
