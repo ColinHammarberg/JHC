@@ -37,7 +37,7 @@ export const menuItems = [
     {
         key: 2,
         navigation: 'utalization',
-        title: 'Request Help',
+        title: 'Services',
         className: 'help'
     },
     {

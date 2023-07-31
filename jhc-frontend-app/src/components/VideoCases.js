@@ -108,7 +108,7 @@ function VideoCases() {
               <div className="image-thumbnail">
                 <div class="thumbnail-wrapper">
                   <BoxButton onClick={() => handlePressPlay(index)} type={video.thumbnail} />
-                  {/* <span className="text">{video.text}</span> */}
+                  <span className="text">{video.text}</span>
                 </div>
               </div>
             )}

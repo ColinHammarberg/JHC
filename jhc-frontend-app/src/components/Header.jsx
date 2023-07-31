@@ -24,7 +24,7 @@ function Header(props) {
                 <Menu handleOnClickMenuItem={handleOnClickMenuItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
             </div>
             <div className="back-button">
-                <BackButton />
+                {!props.jhcLanding && <BackButton />}
                 <span>{props.pageName}</span>
             </div>
         </div>

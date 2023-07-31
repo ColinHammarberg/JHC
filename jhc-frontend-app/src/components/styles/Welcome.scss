@@ -23,6 +23,7 @@
     .content {
         display: flex;
         animation: ease 2s ease;
+
         .content-left {
             img {
                 height: 1000px;
@@ -60,20 +61,21 @@
                     }
                 }
             }
+
             .scroll {
                 display: flex;
                 margin-top: 60px;
                 text-align: center;
                 justify-content: center;
-        
+
                 .scrolling-btn {
                     animation: ease 3s ease;
-        
+
                     img {
-                        width: 75px;
+                        width: 50px;
                     }
                 }
-        
+
                 .MuiSvgIcon-root {
                     font-size: 24px;
                 }
@@ -113,17 +115,15 @@
             }
 
             .showcase {
-                display: block;
+                display: flex;
                 gap: 40px;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                margin-top: 20px;
+                margin-top: 40px;
                 animation: ease 3s ease;
 
                 .showcase-company {
-                    margin-bottom: 40px;
-
                     img {
                         max-width: 100px;
                     }
@@ -140,15 +140,7 @@
             margin-top: 60px;
             text-align: center;
             justify-content: center;
-    
-            .scrolling-btn {
-                animation: ease 3s ease;
-    
-                img {
-                    width: 75px;
-                }
-            }
-    
+
             .MuiSvgIcon-root {
                 font-size: 24px;
             }

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { isMobile } from 'react-device-detect';
@@ -18,6 +18,7 @@ export const Welcome = () => {
   const targetRef = useRef(null);
   const [showSpceLanding, setShowSpceLanding] = React.useState(false);
   const [scrolledUp, setScrolledUp] = React.useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +46,18 @@ export const Welcome = () => {
       key: 3,
       source: Vattenfall,
     },
+    {
+      key: 4,
+      source: Vattenfall,
+    },
+    {
+      key: 5,
+      source: Vattenfall,
+    },
+    {
+      key: 6,
+      source: Vattenfall,
+    },
   ];
 
   const handleClick = async () => {
@@ -56,16 +69,24 @@ export const Welcome = () => {
   };
 
   const handleOnClickBack = () => {
-    return;
-  }
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? Images.length - 1 : prevIndex - 1));
+  };
 
   const handleOnClickForward = () => {
-    return;
-  }
+    setCurrentIndex((prevIndex) => (prevIndex === Images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const visibleImages = isMobile
+    ? [Images[currentIndex]]
+    : [
+        Images[(currentIndex - 1 + Images.length) % Images.length],
+        Images[currentIndex],
+        Images[(currentIndex + 1) % Images.length],
+      ];
 
   return (
     <div className="welcome">
-      <Header pageName="Overview" />
+      <Header />
       {isMobile ? (
         <>
           <div className="content">
@@ -76,11 +97,11 @@ export const Welcome = () => {
             Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
           </div>
           <div className="showcase">
-            <ArrowLeftIcon />
-              {Images.map((item) => {
-                return <ShowcaseCompany item={item} />;
-              })}
-            <ArrowRightIcon />
+            <ArrowLeftIcon onClick={handleOnClickBack} />
+              {visibleImages.map((item) => (
+                <ShowcaseCompany key={item.key} item={item} />
+              ))}
+            <ArrowRightIcon onClick={handleOnClickForward} />
           </div>
         </div>
           <div className="scroll">
@@ -100,11 +121,11 @@ export const Welcome = () => {
                 Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
               </div>
               <div className="showcase">
-                <ArrowLeftIcon onClick={handleOnClickBack} />
-                {Images.map((item) => {
-                  return <ShowcaseCompany item={item} />;
-                })}
-                <ArrowRightIcon onClick={handleOnClickForward} />
+              <ArrowLeftIcon onClick={handleOnClickBack} />
+                  {visibleImages.map((item) => (
+                    <ShowcaseCompany key={item.key} item={item} />
+                  ))}
+              <ArrowRightIcon onClick={handleOnClickForward} />
               </div>
               <div className="scroll">
                 {!showSpceLanding && (
