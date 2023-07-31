@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Avatar } from './Avatar';
-import './styles/Utalization.scss';
-import { JhcButton } from './Buttons';
+import './styles/Services.scss';
 import { useNavigate } from 'react-router-dom';
 import { ProblemAreas } from './ProblemAreas';
 import { OrganizationProblems } from '../constants/Constants';
@@ -9,7 +8,7 @@ import { JhcContext } from '../context/JhcContext';
 import Image from '../images/Jonas-4.png';
 import Header from './Header';
 
-export const Utalization = () => {
+export const Services = () => {
     const navigate = useNavigate();
     const { selectedProblemType, setSelectedProblemType } = useContext(JhcContext);
 
@@ -34,8 +33,8 @@ export const Utalization = () => {
                         )
                     })}
                 </div>
-                <div className="redirect-btn">
-                    <JhcButton onClick={handleOnClickRedirect} label="Continue" />
+                <div className="redirect-btn" onClick={handleOnClickRedirect}>
+                    Continue
                 </div>
             </div>
         </div>

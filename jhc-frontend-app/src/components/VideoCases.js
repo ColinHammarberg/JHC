@@ -3,6 +3,8 @@ import './styles/VideoCases.scss';
 import Header from './Header';
 import Tabs, { useTabs } from './Tabs';
 import BoxButton from './BoxButton';
+import JonasInspiration from '../images/Jonas-inspiration.png';
+import JonasSpeech from '../images/Jonas-speech.png';
 
 const inspirationVideos = [
   {
@@ -107,7 +109,7 @@ function VideoCases() {
             ) : (
               <div className="image-thumbnail">
                 <div class="thumbnail-wrapper">
-                  <BoxButton onClick={() => handlePressPlay(index)} type={video.thumbnail} />
+                  <BoxButton onClick={() => handlePressPlay(index)} variant={video.thumbnail === 0 ? JonasSpeech : JonasInspiration} type={video.thumbnail} />
                   <span className="text">{video.text}</span>
                 </div>
               </div>

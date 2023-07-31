@@ -1,18 +1,17 @@
 import React from 'react';
-import JonasInspiration from '../images/Jonas-inspiration.png';
-import JonasSpeech from '../images/Jonas-speech.png';
 import { Button } from '@mui/material';
+import './styles/BoxButton.scss';
 
 
-function BoxButton({ type, onClick }) {
+function BoxButton({ variant, onClick, className }) {
 
     function handleOnClick() {
         onClick();
     }
 
     return (
-        <Button className="box-button" onClick={handleOnClick}>
-            <img src={type === 0 ? JonasSpeech : JonasInspiration} alt='' />
+        <Button className={`box-button ${className}`} onClick={handleOnClick}>
+            {typeof variant === 'object' ? variant : <img src={variant} alt='' />}
         </Button>
     )
 }

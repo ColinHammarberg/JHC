@@ -6,7 +6,7 @@ export const JhcContext = createContext();
 const JhcContextProvider = ({ children }) => {
   const [selectedProblems, setSelectedProblems] = useState([]);
 
-  function handleOnClickUtalization(item) {
+  function handleOnClickServices(item) {
     console.log('item', item);
     const selectedIndex = selectedProblems.indexOf(item.key);
     if (selectedIndex > -1) {
@@ -25,7 +25,7 @@ const JhcContextProvider = ({ children }) => {
       value={{
         selectedProblems,
         setSelectedProblems,
-        handleOnClickUtalization
+        handleOnClickServices
       }}
     >
       {children}

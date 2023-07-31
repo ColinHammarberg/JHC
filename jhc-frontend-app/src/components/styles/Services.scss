@@ -1,3 +1,5 @@
+@import './utils/ResponsiveUtils.scss';
+
 @keyframes floatIn {
     0% {
         opacity: 0;
@@ -17,7 +19,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    border-left: #D381F5 25px solid;
+    // border-left: #D381F5 25px solid;
 
     .content {
         .avatar {
@@ -70,8 +72,23 @@
             align-items: center;
             justify-content: center;
             display: flex;
-            margin-top: 100px;
+            margin-top: 150px;
             animation: floatIn 4s ease-in-out;
+            cursor: pointer;
+            font-family: 'MediumLLWeb-Bold';
+        }
+    }
+}
+
+@include media(phone) {
+    .problem-utilization {
+        .content {
+            .description {
+                font-size: 15px;
+            }
+            // .showcase {
+            //     display: grid;
+            // }
         }
     }
 }

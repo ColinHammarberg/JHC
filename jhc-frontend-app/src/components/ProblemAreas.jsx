@@ -1,13 +1,13 @@
 import React from 'react';
 import './styles/ProblemArea.scss';
-import { IconButton } from '@mui/material';
 import { JhcContext } from '../context/JhcContext';
+import BoxButton from './BoxButton';
 
 export const ProblemAreas = (props) => {
     const { item } = props;
-    const { handleOnClickUtalization, selectedProblems } = React.useContext(JhcContext);
+    const { handleOnClickServices, selectedProblems } = React.useContext(JhcContext);
     function handleOnClick() {
-      handleOnClickUtalization(item)
+      handleOnClickServices(item)
     }
 
     const isActive = selectedProblems.includes(item.key);
@@ -16,9 +16,7 @@ export const ProblemAreas = (props) => {
     return (
         <div className="problem-area">
           <div className="content">
-              <IconButton onClick={handleOnClick} className={`${isActive && 'active'}`}>
-                  {item.icon}
-              </IconButton>
+            <BoxButton onClick={handleOnClick} className={`${isActive && 'active'}`} variant={item.icon} />
               <div className="title">
                 {item.title}
               </div>
