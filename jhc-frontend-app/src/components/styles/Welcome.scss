@@ -28,13 +28,16 @@
             img {
                 height: 1000px;
                 width: 980px;
+                margin-right: 20px; /* Add some space between image and content-right */
             }
         }
 
         .content-right {
             width: 100%;
             display: flex;
-            justify-content: left;
+            flex-direction: column; /* Adjust to a column layout */
+            align-items: center; /* Center the content in the right column */
+            justify-content: center;
 
             .container {
                 .description {
@@ -44,7 +47,7 @@
                     animation: ease 2s ease;
                     text-align: center;
                     margin: auto;
-                    margin-top: 200px;
+                    margin-top: 20px; /* Adjust the margin to your preference */
                 }
 
                 .showcase {

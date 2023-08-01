@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { isMobile } from 'react-device-detect';
@@ -16,11 +16,11 @@ import JonasInAction from '../images/Jonas-in-action.png';
 
 export const Welcome = () => {
   const targetRef = useRef(null);
-  const [showSpceLanding, setShowSpceLanding] = React.useState(false);
-  const [scrolledUp, setScrolledUp] = React.useState(false);
+  const [showSpceLanding, setShowSpceLanding] = useState(false);
+  const [scrolledUp, setScrolledUp] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setScrolledUp(window.scrollY);
       if (scrolledUp === 0) {
@@ -90,55 +90,51 @@ export const Welcome = () => {
       {isMobile ? (
         <>
           <div className="content">
-          <div className="avatar">
-            <Avatar image={Image} />
-          </div>
-          <div className="description">
-            Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
-          </div>
-          <div className="showcase">
-            <ArrowLeftIcon onClick={handleOnClickBack} />
+            <div className="avatar">
+              <Avatar image={Image} />
+            </div>
+            <div className="description">
+              Helping all from large companies to small start-ups succeed and reach their vision in the most engaging and tangible way.
+            </div>
+            <div className="showcase">
+              <ArrowLeftIcon onClick={handleOnClickBack} />
               {visibleImages.map((item) => (
                 <ShowcaseCompany key={item.key} item={item} />
               ))}
-            <ArrowRightIcon onClick={handleOnClickForward} />
+              <ArrowRightIcon onClick={handleOnClickForward} />
+            </div>
           </div>
-        </div>
           <div className="scroll">
-          {!showSpceLanding && (
-            <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
-          )}
+            {!showSpceLanding && <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />}
           </div>
         </>
       ) : (
         <>
           <div className="content">
             <div className="content-left">
-              <img src={JonasInAction} alt=""/>
+              <img src={JonasInAction} alt="" />
             </div>
             <div className="content-right">
               <div className="container">
                 <div className="description">
-                  Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
+                  Helping all from large companies to small start-ups succeed and reach their vision in the most engaging and tangible way.
                 </div>
                 <div className="showcase">
-                <ArrowLeftIcon onClick={handleOnClickBack} />
-                    {visibleImages.map((item) => (
-                      <ShowcaseCompany key={item.key} item={item} />
-                    ))}
-                <ArrowRightIcon onClick={handleOnClickForward} />
+                  <ArrowLeftIcon onClick={handleOnClickBack} />
+                  {visibleImages.map((item) => (
+                    <ShowcaseCompany key={item.key} item={item} />
+                  ))}
+                  <ArrowRightIcon onClick={handleOnClickForward} />
                 </div>
                 <div className="scroll">
-                  {!showSpceLanding && (
-                    <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
-                  )}
+                  {!showSpceLanding && <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />}
                 </div>
               </div>
             </div>
           </div>
         </>
       )}
-      
+
       <div className="spce-section">
         {showSpceLanding && <SpceLanding ref={targetRef} />}
       </div>
