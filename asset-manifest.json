@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/JHC/static/css/main.a4433e7a.css",
-    "main.js": "/JHC/static/js/main.9bf6101d.js",
+    "main.js": "/JHC/static/js/main.e4e390f2.js",
     "static/js/787.e363e5fb.chunk.js": "/JHC/static/js/787.e363e5fb.chunk.js",
     "static/media/Jonas-in-action.png": "/JHC/static/media/Jonas-in-action.888d33eac4acb7006920.png",
     "static/media/Jonas-inspiration.png": "/JHC/static/media/Jonas-inspiration.de30e977256ad904ddb3.png",
@@ -21,11 +21,11 @@
     "static/media/fellowmind.webp": "/JHC/static/media/fellowmind.18af05a8af3ab1236115.webp",
     "index.html": "/JHC/index.html",
     "main.a4433e7a.css.map": "/JHC/static/css/main.a4433e7a.css.map",
-    "main.9bf6101d.js.map": "/JHC/static/js/main.9bf6101d.js.map",
+    "main.e4e390f2.js.map": "/JHC/static/js/main.e4e390f2.js.map",
     "787.e363e5fb.chunk.js.map": "/JHC/static/js/787.e363e5fb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4433e7a.css",
-    "static/js/main.9bf6101d.js"
+    "static/js/main.e4e390f2.js"
   ]
 }
