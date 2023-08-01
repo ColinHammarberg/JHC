@@ -115,7 +115,7 @@ export const Welcome = () => {
             <div className="content-right">
               <div className="container">
                 <div className="description">
-                  Helping all from large companies to small start-ups succeed and reach their vision in the most engaging and tangible way.
+                Helping all from large companies to small start-ups succeed and reach their <br></br> vision in the most engaging and tangible way.
                 </div>
                 <div className="showcase">
                   <ArrowLeftIcon onClick={handleOnClickBack} />
