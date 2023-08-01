@@ -93,7 +93,7 @@ export const Welcome = () => {
               <Avatar image={Image} />
             </div>
             <div className="description">
-              Helping all from large companies to small start-ups succeed and reach their vision in the most engaging and tangible way.
+              Helping all from large companies to small start-ups succeed <br></br> and reach their vision in the most <br></br> engaging and tangible way.
             </div>
             <div className="showcase">
               <ArrowLeftIcon onClick={handleOnClickBack} />
