@@ -63,14 +63,12 @@
 
     &.transition {
         background-color: rgba(255, 255, 255, 1);
-        animation: ease 2s ease;
     }
 
     .content-left {
         display: flex;
         justify-content: left;
         align-items: left;
-        animation: ease 2s ease;
         img {
             height: 1000px;
             width: 980px;

@@ -7,19 +7,6 @@ import Header from './Header';
 function JhcLanding() {
   const navigate = useNavigate();
   const [showBackgroundTransition, setShowBackgroundTransition] = useState(false);
-  // const [showLoading, setShowLoading] = useState(false);
-  // const [seconds, setSeconds] = useState();
-
-  // function beginCountDown(seconds) {
-  //   let counter = seconds;
-  //   const interval = setInterval(() => {
-  //     counter--;
-  //     setSeconds(counter);
-  //     if (counter < 0) {
-  //       clearInterval(interval);
-  //     }
-  //   }, 1000);
-  // }
 
   useEffect(() => {
     const timeoutRedirect = setTimeout(() => {
