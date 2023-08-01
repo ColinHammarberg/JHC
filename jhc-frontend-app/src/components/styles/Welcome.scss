@@ -32,7 +32,6 @@
         }
 
         .content-right {
-            margin-right: 100px;
             .description {
                 font-size: 16px;
                 font-family: 'MediumLLWeb-Regular';
@@ -42,7 +41,6 @@
                 margin: auto;
                 margin-top: 200px;
             }
-
             .showcase {
                 display: flex;
                 gap: 40px;
@@ -51,11 +49,9 @@
                 text-align: center;
                 margin-top: 20px;
                 animation: ease 3s ease;
-
                 .MuiSvgIcon-root {
                     font-size: 34px;
                 }
-
                 .showcase-company {
                     img {
                         max-width: 100px;
