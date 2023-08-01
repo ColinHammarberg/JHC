@@ -63,15 +63,17 @@
 
     &.transition {
         background-color: rgba(255, 255, 255, 1);
+        animation: ease 2s ease;
     }
 
-    .landing-image {
+    .content-left {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: left;
+        align-items: left;
+        animation: ease 2s ease;
         img {
+            height: 1000px;
             width: 980px;
-            height: 910px;
         }
     }
 
@@ -89,7 +91,7 @@
 
 @include media(phone) {
     .home-container {
-        .landing-area {
+        .content-left {
             height: 600px;
             margin-top: 150px;
 

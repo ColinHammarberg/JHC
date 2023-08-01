@@ -45,7 +45,7 @@ function JhcLanding() {
       <div className="header-container">
         <Header jhcLanding />
       </div>
-        <div className="landing-image">
+        <div className="content-left">
           <img src={JonasInAction} alt=""/>
         </div>
     </div>

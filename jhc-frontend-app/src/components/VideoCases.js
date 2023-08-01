@@ -77,7 +77,9 @@ function VideoCases() {
   const videos = activeTab === 1 ? PublicVideos : inspirationVideos;
 
   const handlePressPlay = (index) => {
-    setPlayingVideo(index);
+    setTimeout(() => {
+      setPlayingVideo(index);
+    }, [1500]);
     console.log('playingVideo', playingVideo);
   };
 
