@@ -117,20 +117,22 @@ export const Welcome = () => {
               <img src={JonasInAction} alt=""/>
             </div>
             <div className="content-right">
-              <div className="description">
-                Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
-              </div>
-              <div className="showcase">
-              <ArrowLeftIcon onClick={handleOnClickBack} />
-                  {visibleImages.map((item) => (
-                    <ShowcaseCompany key={item.key} item={item} />
-                  ))}
-              <ArrowRightIcon onClick={handleOnClickForward} />
-              </div>
-              <div className="scroll">
-                {!showSpceLanding && (
-                  <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
-                )}
+              <div className="container">
+                <div className="description">
+                  Helping all from large companies to small start-ups succeed and reach <br></br> their vision in the most engaging and tangible way.
+                </div>
+                <div className="showcase">
+                <ArrowLeftIcon onClick={handleOnClickBack} />
+                    {visibleImages.map((item) => (
+                      <ShowcaseCompany key={item.key} item={item} />
+                    ))}
+                <ArrowRightIcon onClick={handleOnClickForward} />
+                </div>
+                <div className="scroll">
+                  {!showSpceLanding && (
+                    <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />
+                  )}
+                </div>
               </div>
             </div>
           </div>

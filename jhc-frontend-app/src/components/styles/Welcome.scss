@@ -33,54 +33,58 @@
 
         .content-right {
             width: 100%;
+            display: flex;
+            justify-content: left;
 
-            .description {
-                font-size: 16px;
-                font-family: 'MediumLLWeb-Regular';
-                font-weight: 500;
-                animation: ease 2s ease;
-                text-align: center;
-                margin: auto;
-                margin-top: 200px;
-            }
-
-            .showcase {
-                display: flex;
-                gap: 40px;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                margin-top: 20px;
-                animation: ease 3s ease;
-                height: 50px;
-
-                .MuiSvgIcon-root {
-                    font-size: 34px;
+            .container {
+                .description {
+                    font-size: 16px;
+                    font-family: 'MediumLLWeb-Regular';
+                    font-weight: 500;
+                    animation: ease 2s ease;
+                    text-align: center;
+                    margin: auto;
+                    margin-top: 200px;
                 }
 
-                .showcase-company {
-                    img {
-                        max-width: 100px;
-                    }
-                }
-            }
-
-            .scroll {
-                display: flex;
-                margin-top: 60px;
-                text-align: center;
-                justify-content: center;
-
-                .scrolling-btn {
+                .showcase {
+                    display: flex;
+                    gap: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin-top: 20px;
                     animation: ease 3s ease;
+                    height: 50px;
 
-                    img {
-                        width: 50px;
+                    .MuiSvgIcon-root {
+                        font-size: 34px;
+                    }
+
+                    .showcase-company {
+                        img {
+                            max-width: 100px;
+                        }
                     }
                 }
 
-                .MuiSvgIcon-root {
-                    font-size: 24px;
+                .scroll {
+                    display: flex;
+                    margin-top: 60px;
+                    text-align: center;
+                    justify-content: center;
+
+                    .scrolling-btn {
+                        animation: ease 3s ease;
+
+                        img {
+                            width: 50px;
+                        }
+                    }
+
+                    .MuiSvgIcon-root {
+                        font-size: 24px;
+                    }
                 }
             }
         }
