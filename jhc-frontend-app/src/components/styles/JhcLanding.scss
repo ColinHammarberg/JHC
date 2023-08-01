@@ -46,8 +46,6 @@
 
 .home-container {
     background-color: rgba(216, 223, 233, 1);
-    height: 100%;
-    width: 100%;
     display: block;
     align-items: center;
     justify-content: center;
@@ -55,6 +53,7 @@
     .header-container {
         height: 80px;
         width: 100%;
+
         .header {
             height: 80px;
             background-color: #fff;
@@ -69,9 +68,14 @@
         display: flex;
         justify-content: left;
         align-items: left;
+        position: inherit;
+        margin-top: 20px;
+        width: 100%;
+
         img {
-            height: 1000px;
-            width: 980px;
+            height: 820px;
+            width: 800px;
+            bottom: 0;
         }
     }
 

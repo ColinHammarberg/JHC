@@ -17,23 +17,26 @@
     background-color: #ffff;
     height: 100vh;
     width: 100%;
-    align-items: center;
-    justify-content: center;
+    position: relative; /* Add relative positioning to the .welcome container */
 
     .content {
         display: flex;
         animation: ease 2s ease;
+        position: absolute; /* Use absolute positioning for the .content section */
+        bottom: 0; /* Align the content to the bottom */
+        left: 0; /* Position the content on the left edge */
+        width: 100%; /* Ensure the content spans the full width */
 
         .content-left {
             img {
-                height: 1000px;
-                width: 980px;
+                height: 820px;
+                width: 800px;
                 margin-right: 20px; /* Add some space between image and content-right */
             }
         }
 
         .content-right {
-            width: 100%;
+            flex: 1; /* Allow the content-right section to grow and fill the available space */
             display: flex;
             flex-direction: column; /* Adjust to a column layout */
             align-items: center; /* Center the content in the right column */
