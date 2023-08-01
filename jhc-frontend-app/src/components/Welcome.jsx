@@ -86,9 +86,8 @@ export const Welcome = () => {
 
   return (
     <div className="welcome">
-      <Header />
+      <Header jhcLanding />
       {isMobile ? (
-        <>
           <div className="content">
             <div className="avatar">
               <Avatar image={Image} />
@@ -103,11 +102,10 @@ export const Welcome = () => {
               ))}
               <ArrowRightIcon onClick={handleOnClickForward} />
             </div>
+            <div className="scroll">
+              {!showSpceLanding && <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />}
+            </div>
           </div>
-          <div className="scroll">
-            {!showSpceLanding && <ScrollButton showSpceLanding={showSpceLanding} onClick={handleClick} />}
-          </div>
-        </>
       ) : (
         <>
           <div className="content">
