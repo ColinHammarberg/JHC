@@ -19,13 +19,15 @@ function Header(props) {
         navigate(`${process.env.REACT_APP_BASEURL}/${navigation}`);
     }
     return (
-        <div className="header">
-            <div className={!isOpen ? 'closed-menu' : 'opened-menu'}>
-                <Menu handleOnClickMenuItem={handleOnClickMenuItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
-            </div>
-            <div className="back-button">
-                {!props.jhcLanding && <BackButton />}
-                <span>{props.pageName}</span>
+        <div className="header-container">
+            <div className="header">
+                <div className={!isOpen ? 'closed-menu' : 'opened-menu'}>
+                    <Menu handleOnClickMenuItem={handleOnClickMenuItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
+                </div>
+                <div className="back-button">
+                    {!props.jhcLanding && <BackButton />}
+                    <span>{props.pageName}</span>
+                </div>
             </div>
         </div>
     )
