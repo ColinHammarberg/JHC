@@ -85,6 +85,7 @@ export const Welcome = () => {
       ];
 
   return (
+    <>
     <div className="welcome">
       <Header jhcLanding />
       {isMobile ? (
@@ -132,10 +133,10 @@ export const Welcome = () => {
           </div>
         </>
       )}
-
-      <div className="spce-section">
-        {showSpceLanding && <SpceLanding ref={targetRef} />}
-      </div>
     </div>
+    <div className="spce-section">
+      {showSpceLanding && <SpceLanding ref={targetRef} />}
+    </div>
+    </>
   );
 };
