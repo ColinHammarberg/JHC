@@ -29,6 +29,7 @@
             justify-content: center;
             margin-bottom: 40px;
             animation: floatIn 1s ease-in-out;
+
             img {
                 width: 150px;
             }
@@ -82,13 +83,48 @@
 
 @include media(phone) {
     .problem-utilization {
+        display: grid;
+        margin-bottom: 20px;
+
         .content {
             .description {
                 font-size: 15px;
             }
-            // .showcase {
-            //     display: grid;
-            // }
+
+            .avatar {
+                margin-bottom: 20px;
+            }
+
+            .title {
+                width: 150px;
+                font-size: 13px;
+            }
+
+            .redirect-btn {
+                margin-top: 50px;
+            }
+
+            .showcase {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); // Display items in two columns
+                gap: 50px;
+                text-align: center;
+
+                .problem-area {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 16px;
+
+                    .box-button {
+                        width: 100px;
+                        height: 100px;
+
+                        .MuiSvgIcon-root {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
