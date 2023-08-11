@@ -3,9 +3,11 @@ import BackButton from './BackButton';
 import './styles/Header.scss';
 import { Menu } from './Menu';
 import { useNavigate } from 'react-router-dom';
+import Tabs from './Tabs';
 
 function Header(props) {
     const [isOpen, setIsOpen] = useState(false);
+    const { onChange, tabs, isMobile } = props;
     const navigate = useNavigate();
     const handleOpenMenu = () => {
         setIsOpen(true);
@@ -26,6 +28,15 @@ function Header(props) {
                 </div>
                 <div className="back-button">
                     {!props.jhcLanding && <BackButton />}
+                    <div className="tabs">
+                        {props.videoCases && !isMobile && (
+                            <Tabs
+                                tabs={tabs}
+                                onChange={onChange}
+                                variant="tabs-level-2 preview-details-privacy-level"
+                            />
+                        )}
+                    </div>
                     <span>{props.pageName}</span>
                 </div>
             </div>
