@@ -3,25 +3,31 @@ import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import BusinessIcon from '@mui/icons-material/Business';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
 
 export const OrganizationProblems = [
     {
         key: 1,
         icon: <RecordVoiceOverIcon />,
-        title: 'GO-TO-MARKET'
+        title: 'PUBLIC SPEECH'
     },
     {
         key: 2,
         icon: <AccessibilityNewIcon />,
-        title: 'GO-TO-MARKET'
+        title: 'EXECUTIVE COACHING'
     },
     {
         key: 3,
         icon: <ApartmentIcon />,
-        title: 'GO-TO-MARKET'
+        title: 'LEADERSHIP DEVELOPMENT'
     },
     {
         key: 4,
+        icon: <Diversity3Icon />,
+        title: 'CORPORATE CULTURE'
+    },
+    {
+        key: 5,
         icon: <BusinessIcon />,
         title: 'GO-TO-MARKET'
     },

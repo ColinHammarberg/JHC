@@ -7,7 +7,7 @@ import Tabs from './Tabs';
 
 function Header(props) {
     const [isOpen, setIsOpen] = useState(false);
-    const { onChange, tabs, isMobile } = props;
+    const { onChange, tabs, isMobile, videoCases } = props;
     const navigate = useNavigate();
     const handleOpenMenu = () => {
         setIsOpen(true);
@@ -26,10 +26,10 @@ function Header(props) {
                 <div className={!isOpen ? 'closed-menu' : 'opened-menu'}>
                     <Menu handleOnClickMenuItem={handleOnClickMenuItem} handleOpenMenu={handleOpenMenu} handleCloseMenu={handleCloseMenu} isOpen={isOpen} />
                 </div>
-                <div className="back-button">
+                <div className={`back-button ${videoCases ? 'video-cases' : ''}`}>
                     {!props.jhcLanding && <BackButton />}
                     <div className="tabs">
-                        {props.videoCases && !isMobile && (
+                        {videoCases && !isMobile && (
                             <Tabs
                                 tabs={tabs}
                                 onChange={onChange}

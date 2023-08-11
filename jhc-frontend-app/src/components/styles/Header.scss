@@ -35,7 +35,9 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            display: flex;
+            &.video-cases {
+                display: flex;
+            }
 
             .MuiIconButton-root {
                 margin-right: 16px;

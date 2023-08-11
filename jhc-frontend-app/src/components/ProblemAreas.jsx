@@ -11,7 +11,6 @@ export const ProblemAreas = (props) => {
     }
 
     const isActive = selectedProblems.includes(item.key);
-    console.log('selectedProblems', selectedProblems);
     
     return (
         <div className="problem-area">

@@ -25,7 +25,7 @@ const inspirationVideos = [
   {
     src: 'https://www.youtube.com/embed/A6CPhJ8GWhU',
     thumbnail: 0,
-    text: 'Vilken typ av hotell skulle du då vilja driva?',
+    text: 'Vilket typ av hotell skulle du då vilja driva?',
     alt: 'Thumbnail 3',
     className: 'video-3'
   },

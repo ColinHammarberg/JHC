@@ -6,7 +6,11 @@
         justify-content: center;
 
         .active {
-            color: #D381F5;
+            background-color: #000;
+
+            .MuiSvgIcon-root {
+                color: #fff;
+            }
         }
 
         .title {

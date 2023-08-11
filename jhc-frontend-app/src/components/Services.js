@@ -34,7 +34,7 @@ export const Services = () => {
                     })}
                 </div>
                 <div className="redirect-btn" onClick={handleOnClickRedirect}>
-                    Continue
+                    Click to&nbsp;<a>continue</a>
                 </div>
             </div>
         </div>
