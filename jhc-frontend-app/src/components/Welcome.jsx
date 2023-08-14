@@ -5,9 +5,13 @@ import { isMobile } from 'react-device-detect';
 import { Avatar } from './Avatar';
 import './styles/Welcome.scss';
 import { ShowcaseCompany } from './ShowcaseCompany';
-import Microsoft from '../images/MicrosoftTeams.png';
-import Fellowmind from '../images/fellowmind.webp';
-import Vattenfall from '../images/Vattenfall.png';
+import Fellowmind from '../images/Fellowmind.png';
+import Intrum from '../images/logo-2.png';
+import Microsoft from '../images/Microsoft.png';
+import Swedbank from '../images/Swedbank.png';
+// import Tele from '../images/Tele2.png';
+import Telia from '../images/telia.png';
+import Westinghouse from '../images/Westinghouse.png';
 import Header from './Header';
 import Image from '../images/Jonas-4.png';
 import { ScrollButton } from './ScrollButton';
@@ -33,6 +37,15 @@ export const Welcome = () => {
     };
   }, [scrolledUp, showSpceLanding]);
 
+  useEffect(() => {
+    const imageTimer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex === Images.length - 1 ? 0 : prevIndex + 1));
+    }, 2500);
+    return () => {
+      clearInterval(imageTimer);
+    }
+  })
+
   const Images = [
     {
       key: 1,
@@ -44,20 +57,24 @@ export const Welcome = () => {
     },
     {
       key: 3,
-      source: Vattenfall,
+      source: Intrum,
     },
     {
       key: 4,
-      source: Vattenfall,
+      source: Swedbank,
     },
     {
       key: 5,
-      source: Vattenfall,
+      source: Telia,
     },
     {
       key: 6,
-      source: Vattenfall,
+      source: Westinghouse,
     },
+    // {
+    //   key: 6,
+    //   source: Tele,
+    // },
   ];
 
   const handleClick = async () => {

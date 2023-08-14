@@ -69,12 +69,13 @@
 
                     .MuiSvgIcon-root {
                         font-size: 34px;
+                        cursor: pointer;
                     }
 
                     .showcase-company {
-                        background-color: rgb(214, 217, 217);
-                        height: 35px;
-                        padding: 0 16px;
+                        background-color: rgb(0, 0, 0);
+                        height: 40px;
+                        padding: 4px 16px;
                         display: grid;
                         align-items: center;
                         border-radius: 4px;
@@ -152,9 +153,9 @@
                 animation: ease 3s ease;
 
                 .showcase-company {
-                    background-color: rgb(214, 217, 217);
-                    height: 35px;
-                    padding: 0 16px;
+                    background-color: rgb(0, 0, 0);
+                    height: 40px;
+                    padding: 4px 16px;
                     display: grid;
                     align-items: center;
                     border-radius: 4px;
