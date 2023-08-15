@@ -12,7 +12,7 @@ function JhcLanding() {
     const timeoutRedirect = setTimeout(() => {
       setShowBackgroundTransition(true);
       const redirectTimeout = setTimeout(() => {
-        navigate(`${process.env.REACT_APP_BASEURL}/welcome`);
+        navigate(`/welcome`);
       }, 2000);
 
       return () => {

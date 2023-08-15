@@ -18,7 +18,7 @@ function Header(props) {
     };
     function handleOnClickMenuItem (navigation) {
         // navigate(`/${navigation}`);
-        navigate(`${process.env.REACT_APP_BASEURL}/${navigation}`);
+        navigate(`/${navigation}`);
     }
     return (
         <div className="header-container">

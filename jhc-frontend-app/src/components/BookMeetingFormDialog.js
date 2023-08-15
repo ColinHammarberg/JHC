@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import ReactDOM, { render } from 'react-dom';
-import { Dialog } from '@mui/material';
+import { Dialog, DialogContent } from '@mui/material';
+import './styles/BookMeetingFormDialog.scss';
+import BookMeetingForm from './BookMeetingForm';
 
 let resolve;
 let containerElement;
@@ -38,7 +40,7 @@ class BookMeetingFormDialog extends PureComponent {
   static show() {
     containerElement = document.createElement('div');
     document.body.appendChild(containerElement);
-    render(<BookMeetingFormDialog />);
+    render(<BookMeetingFormDialog />, containerElement);
     return new Promise((res) => {
       resolve = res;
     });
@@ -49,14 +51,14 @@ class BookMeetingFormDialog extends PureComponent {
       this.props.onClickCancel();
     } else {
       this.setState({ isOpen: false }, () => {
-        ConfirmDialog.destroy();
+        BookMeetingFormDialog.destroy();
       });
     }
   }
 
   handleHistoryStateChanged() {
     this.setState({ isOpen: false }, () => {
-      ConfirmDialog.destroy();
+      BookMeetingFormDialog.destroy();
     });
   }
 
@@ -65,7 +67,7 @@ class BookMeetingFormDialog extends PureComponent {
       this.props.onClickOk();
     } else {
       this.setState({ isOpen: false }, () => {
-        ConfirmDialog.destroy(true);
+        BookMeetingFormDialog.destroy(true);
       });
     }
   }
@@ -82,7 +84,7 @@ class BookMeetingFormDialog extends PureComponent {
             disableEscapeKeyDown={true}
         >
         <DialogContent className="dialog-content styled-scrollbar">
-          {renderTitle()}
+          <BookMeetingForm />
         </DialogContent>
       </Dialog>
     );

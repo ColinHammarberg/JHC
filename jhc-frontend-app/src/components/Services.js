@@ -1,19 +1,23 @@
 import React, { useContext } from 'react';
 import { Avatar } from './Avatar';
 import './styles/Services.scss';
-import { useNavigate } from 'react-router-dom';
 import { ProblemAreas } from './ProblemAreas';
 import { OrganizationProblems } from '../constants/Constants';
 import { JhcContext } from '../context/JhcContext';
 import Image from '../images/Jonas-4.png';
 import Header from './Header';
+import BookMeetingFormDialog from './BookMeetingFormDialog';
 
 export const Services = () => {
-    const navigate = useNavigate();
     const { selectedProblemType, setSelectedProblemType } = useContext(JhcContext);
 
-    function handleOnClickRedirect() {
-        navigate(`${process.env.REACT_APP_BASEURL}/actions`);
+    async function handleOnBookMeeting() {
+        const { isConfirmed } = await BookMeetingFormDialog.show();
+        if (!isConfirmed) {
+            return;
+        } else {
+            return;
+        }
     }
 
     return (
@@ -33,8 +37,8 @@ export const Services = () => {
                         )
                     })}
                 </div>
-                <div className="redirect-btn" onClick={handleOnClickRedirect}>
-                    Click to&nbsp;<a>continue</a>
+                <div className="redirect-btn" onClick={handleOnBookMeeting}>
+                    Click to&nbsp;<span>continue</span>
                 </div>
             </div>
         </div>

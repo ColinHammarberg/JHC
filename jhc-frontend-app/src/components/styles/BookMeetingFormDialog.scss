@@ -1,0 +1,43 @@
+.responsive-dialog {
+    width: 600px;
+
+    .MuiPaper-root {
+        height: 600px;
+        padding: 24px;
+
+        .form {
+            display: grid;
+            gap: 24px;
+
+            .MuiInputBase-root {
+                width: 100%;
+            }
+
+            .MuiFormControl-root {
+                width: 100%;
+            }
+
+            .name-fields {
+                gap: 8px;
+                display: flex;
+
+                .content {
+                    p {
+                        width: 40px;
+                    }
+                }
+            }
+
+            .work-email-field {
+                gap: 8px;
+                display: flex;
+                width: 100%;
+            }
+
+            .company-field {
+                gap: 8px;
+                display: flex;
+            }
+        }
+    }
+}
