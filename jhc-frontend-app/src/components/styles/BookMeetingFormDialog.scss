@@ -1,9 +1,36 @@
 .responsive-dialog {
     width: 600px;
+    margin: auto;
 
     .MuiPaper-root {
         height: 600px;
         padding: 24px;
+
+        .action-btn {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 24px;
+
+            .btn {
+                width: 75px;
+                height: 40px;
+                padding: 8px 16px;
+                font-weight: 700;
+                font-family: 'MediumLLWeb-Bold';
+
+                &.confirm {
+                    background-color: #000;
+                    color: #fff;
+                }
+
+                &.cancel {
+                    background-color: #dfdfdf;
+                    color: #000;
+                }
+            }
+        }
 
         .form {
             display: grid;
@@ -37,6 +64,22 @@
             .company-field {
                 gap: 8px;
                 display: flex;
+            }
+
+            .description {
+                display: grid;
+                gap: 24px;
+
+                .title {
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+                .selected-problem-item {
+                    text-align: center;
+                }
             }
         }
     }

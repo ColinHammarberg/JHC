@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import ReactDOM, { render } from 'react-dom';
-import { Dialog, DialogContent } from '@mui/material';
+import { Box, Button, Dialog, DialogContent } from '@mui/material';
 import './styles/BookMeetingFormDialog.scss';
 import BookMeetingForm from './BookMeetingForm';
+import JhcContextProvider from '../context/JhcContext';
 
 let resolve;
 let containerElement;
@@ -34,7 +35,7 @@ class BookMeetingFormDialog extends PureComponent {
       ReactDOM.unmountComponentAtNode(containerElement);
       document.body.removeChild(containerElement);
     }
-    resolve(retVal);
+    if (resolve) resolve(retVal);
   }
 
   static show() {
@@ -51,7 +52,7 @@ class BookMeetingFormDialog extends PureComponent {
       this.props.onClickCancel();
     } else {
       this.setState({ isOpen: false }, () => {
-        BookMeetingFormDialog.destroy();
+        BookMeetingFormDialog.destroy({ isConfirmed: false });
       });
     }
   }
@@ -63,13 +64,9 @@ class BookMeetingFormDialog extends PureComponent {
   }
 
   handleConfirm() {
-    if (this.props.onClickOk) {
-      this.props.onClickOk();
-    } else {
       this.setState({ isOpen: false }, () => {
-        BookMeetingFormDialog.destroy(true);
+        BookMeetingFormDialog.destroy({ isConfirmed: true });
       });
-    }
   }
 
   render() {
@@ -84,7 +81,13 @@ class BookMeetingFormDialog extends PureComponent {
             disableEscapeKeyDown={true}
         >
         <DialogContent className="dialog-content styled-scrollbar">
-          <BookMeetingForm />
+          <JhcContextProvider>
+            <BookMeetingForm />
+            <Box className="action-btn">
+              <Button onClick={this.handleConfirm} className="btn confirm">Request</Button>
+              <Button onClick={this.handleCancel} className="btn cancel">Discard</Button>
+            </Box>
+          </JhcContextProvider>
         </DialogContent>
       </Dialog>
     );

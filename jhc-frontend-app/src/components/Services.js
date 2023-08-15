@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { Avatar } from './Avatar';
 import './styles/Services.scss';
 import { ProblemAreas } from './ProblemAreas';
@@ -10,18 +11,24 @@ import BookMeetingFormDialog from './BookMeetingFormDialog';
 
 export const Services = () => {
     const { selectedProblemType, setSelectedProblemType } = useContext(JhcContext);
+    // const [isLoading, setIsLoading] = useState(false);
 
     async function handleOnBookMeeting() {
         const { isConfirmed } = await BookMeetingFormDialog.show();
         if (!isConfirmed) {
             return;
         } else {
-            return;
+            // setIsLoading(true);
         }
     }
 
     return (
         <div className="problem-utilization">
+            {/* {isLoading && (
+                <div className="loading-box">
+                    <AutorenewIcon />
+                </div>
+            )} */}
             <div className="content">
                 <Header />
                 <div className="avatar">
