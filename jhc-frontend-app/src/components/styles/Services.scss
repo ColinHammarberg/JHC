@@ -75,9 +75,9 @@
             display: flex;
             margin-top: 150px;
             animation: floatIn 4s ease-in-out;
-            cursor: pointer;
             font-family: 'MediumLLWeb-Bold';
-            span {
+            .active {
+                cursor: pointer;
                 color: rgba(71, 131, 255, 1);
             }
         }

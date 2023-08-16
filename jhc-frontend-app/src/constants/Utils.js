@@ -1,12 +1,5 @@
-export function beginCountDown(seconds) {
-    let counter = seconds;
+export const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    const interval = setInterval(() => {
-      counter--;
-      setSeconds(counter);
-
-      if (counter < 0) {
-        clearInterval(interval);
-      }
-    }, 1000);
-  }
+export function isValidEmail(email) {
+  return emailRegex.test(email);
+}

@@ -8,19 +8,57 @@ import { JhcContext } from '../context/JhcContext';
 import Image from '../images/Jonas-4.png';
 import Header from './Header';
 import BookMeetingFormDialog from './BookMeetingFormDialog';
+import { Box, Button, Dialog, DialogContent } from '@mui/material';
+import BookMeetingForm from './BookMeetingForm';
 
 export const Services = () => {
-    const { selectedProblemType, setSelectedProblemType } = useContext(JhcContext);
+    const { selectedProblems, formFieldValues, setFieldErrors, fieldErrors } = useContext(JhcContext);
     // const [isLoading, setIsLoading] = useState(false);
 
     async function handleOnBookMeeting() {
-        const { isConfirmed } = await BookMeetingFormDialog.show();
-        if (!isConfirmed) {
+        if (selectedProblems.length > 0) {
+          // Calculate newErrors object based on your validation logic
+          const newErrors = {
+            firstName: !formFieldValues.firstName,
+            lastName: !formFieldValues.lastName,
+            emailAddress: !formFieldValues.emailAddress,
+            companyName: !formFieldValues.companyName,
+        };
+        
+        setFieldErrors(newErrors);
+        const { isConfirmed } = await BookMeetingFormDialog.show((renderDialog) => (
+            renderDialog({
+              render: ({ handleConfirm, handleCancel }) => (
+                <Dialog
+                  className="responsive-dialog"
+                  open
+                  disableBackdropClick={true}
+                  disableEscapeKeyDown={true}
+                >
+                  <DialogContent className="dialog-content styled-scrollbar">
+                    <BookMeetingForm />
+                    <Box className="action-btn">
+                      <Button onClick={handleConfirm} className="btn confirm">Request</Button>
+                      <Button onClick={handleCancel} className="btn cancel">Discard</Button>
+                    </Box>
+                  </DialogContent>
+                </Dialog>
+              ),
+            })
+          ));           
+          if (!isConfirmed) {
             return;
         } else {
-            // setIsLoading(true);
+            // Continue with the rest of your validation and submission logic
+            if (Object.values(newErrors).some(error => error)) {
+                return;
+            }
+            // Proceed with booking the meeting
         }
-    }
+        }
+      }
+      
+      
 
     return (
         <div className="problem-utilization">
@@ -40,12 +78,12 @@ export const Services = () => {
                 <div className="showcase">
                     {OrganizationProblems.map((item) => {
                         return (
-                            <ProblemAreas item={item} selectedProblemType={selectedProblemType} setSelectedProblemType={setSelectedProblemType} />
+                            <ProblemAreas item={item} />
                         )
                     })}
                 </div>
                 <div className="redirect-btn" onClick={handleOnBookMeeting}>
-                    Click to&nbsp;<span>continue</span>
+                    Click to&nbsp;<span className={selectedProblems.length > 0 && 'active'}>continue</span>
                 </div>
             </div>
         </div>
