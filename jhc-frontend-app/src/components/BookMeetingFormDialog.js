@@ -17,14 +17,17 @@ const BookMeetingFormDialog = ({ render, isConfirmed }) => {
 
   const handleConfirm = async () => {
     await setIsConfirmed(true);
-    const fieldsNotEmpty = Object.values(fieldErrors).every(error => error !== '');
+  
+    const fieldsNotEmpty = Object.values(fieldErrors).every(value => value !== '');
+
     console.log('fieldsNotEmpty', fieldsNotEmpty);
+  
     if (fieldsNotEmpty) {
       setIsOpen(false);
-      BookMeetingFormDialog.destroy({ isConfirmed: false });
+      BookMeetingFormDialog.destroy({ isConfirmed: true });
     } else {
       setIsOpen(true);
-      BookMeetingFormDialog.destroy({ isConfirmed: true });
+      BookMeetingFormDialog.destroy({ isConfirmed: false });
     }
   };
 

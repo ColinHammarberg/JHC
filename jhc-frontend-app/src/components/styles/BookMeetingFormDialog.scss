@@ -3,38 +3,63 @@
     margin: auto;
 
     .MuiPaper-root {
-        height: 600px;
-        padding: 24px;
+        min-height: 550px;
+        padding: 16px;
 
         .action-btn {
             display: flex;
-            gap: 24px;
+            gap: 20px;
             align-items: center;
             justify-content: center;
-            margin-top: 24px;
+            margin-top: 40px;
 
             .btn {
-                width: 75px;
-                height: 40px;
+                width: 100%;
+                height: 60px;
                 padding: 8px 16px;
                 font-weight: 700;
                 font-family: 'MediumLLWeb-Bold';
+                border-radius: 4px;
+                font-size: 20px;
 
                 &.confirm {
                     background-color: #000;
                     color: #fff;
+
+                    &:hover {
+                        background-color: #dfdfdf;
+                        color: #000;
+                    }
                 }
 
                 &.cancel {
                     background-color: #dfdfdf;
                     color: #000;
+
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
                 }
             }
         }
 
         .form {
             display: grid;
-            gap: 24px;
+
+            .fields {
+                display: grid;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 24px;
+                text-align: center;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding: 16px;
+            }
 
             .MuiInputBase-root {
                 width: 100%;
