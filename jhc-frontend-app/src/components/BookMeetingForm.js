@@ -20,7 +20,7 @@ const BookMeetingForm = (props) => {
                             label="first name"
                             value={formFieldValues.firstName}
                             error={isConfirmed && fieldErrors.firstName === ''}
-                            helperText={isConfirmed && fieldErrors.firstName == '' ? 'This field is required' : ''}
+                            helperText={isConfirmed && fieldErrors.firstName === '' ? 'This field is required' : ''}
                             required
                         />
                     </Box>
@@ -41,7 +41,7 @@ const BookMeetingForm = (props) => {
                         label="email address"
                         value={formFieldValues.emailAddress}
                         error={isConfirmed && fieldErrors.emailAddress === ''}
-                        helperText={isConfirmed && fieldErrors.emailAddress == '' ? 'This field is required' : ''}
+                        helperText={isConfirmed && fieldErrors.emailAddress === '' ? 'This field is required' : ''}
                         required
                     />
                 </Box>
@@ -51,7 +51,7 @@ const BookMeetingForm = (props) => {
                         label="company name"
                         value={formFieldValues.companyName}
                         error={isConfirmed && fieldErrors.companyName === ''}
-                        helperText={isConfirmed && fieldErrors.companyName == '' ? 'This field is required' : ''}
+                        helperText={isConfirmed && fieldErrors.companyName === '' ? 'This field is required' : ''}
                         required
                     />
                 </Box>

@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
+import React, { useContext } from 'react';
 import { Avatar } from './Avatar';
 import './styles/Services.scss';
 import { ProblemAreas } from './ProblemAreas';
@@ -12,7 +11,7 @@ import { Box, Button, Dialog, DialogContent } from '@mui/material';
 import BookMeetingForm from './BookMeetingForm';
 
 export const Services = () => {
-    const { selectedProblems, formFieldValues, setFieldErrors, fieldErrors } = useContext(JhcContext);
+    const { selectedProblems, formFieldValues, setFieldErrors } = useContext(JhcContext);
     // const [isLoading, setIsLoading] = useState(false);
 
     async function handleOnBookMeeting() {
