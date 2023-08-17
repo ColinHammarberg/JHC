@@ -9,10 +9,20 @@ import Header from './Header';
 import BookMeetingFormDialog from './BookMeetingFormDialog';
 import { Box, Button, Dialog, DialogContent } from '@mui/material';
 import BookMeetingForm from './BookMeetingForm';
+import { sendEmail } from '../constants/Utils';
 
 export const Services = () => {
     const { selectedProblems, formFieldValues, setFieldErrors } = useContext(JhcContext);
     // const [isLoading, setIsLoading] = useState(false);
+
+    async function handleEmailSending(e) {
+        try {
+            const result = await sendEmail(e, formFieldValues);
+            console.log('Email sent successfully:', result);
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    }
 
     async function handleOnBookMeeting() {
         if (selectedProblems.length > 0) {
@@ -47,13 +57,9 @@ export const Services = () => {
           ));           
           if (!isConfirmed) {
             return;
-        } else {
-            // Continue with the rest of your validation and submission logic
-            if (Object.values(newErrors).some(error => error)) {
-                return;
-            }
-            // Proceed with booking the meeting
-        }
+        } else {            
+            handleEmailSending();
+          }
         }
       }
       
