@@ -6,13 +6,20 @@ export function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-export const sendEmail = (e, formFieldValues) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_58k15kk', 'template_kuvwbzb', formFieldValues, 'hJYoW8PqYe75LFRVU')
+  export const sendEmail = (formFieldValues) => {
+    console.log('formFieldValues', formFieldValues);
+    const emailParams = {
+      to_email: 'colin.hammarberg2@gmail.com',
+      subject: 'subject',
+      message: `Name: ${formFieldValues.firstName + ' ' + formFieldValues.lastName} Email address: ${formFieldValues.emailAddress} Company: ${formFieldValues.companyName} Requested service:`,
+    };
+  
+    emailjs.send('service_58k15kk', 'template_kuvwbzb', emailParams, 'hJYoW8PqYe75LFRVU')
       .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+        console.log(result.text);
+        console.log('result', result);
+      })
+      .catch((error) => {
+        console.error(error.text);
       });
   };

@@ -2,29 +2,39 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/BookMeetingFormDialog.scss';
 import JhcContextProvider, { JhcContext } from '../context/JhcContext';
+import { sendEmail } from '../constants/Utils';
 
 let resolve;
 let containerElement;
 
 const BookMeetingFormDialog = ({ render, isConfirmed }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const { fieldErrors, setIsConfirmed } = React.useContext(JhcContext);
+  const { fieldErrors, setIsConfirmed, formFieldValues } = React.useContext(JhcContext);
 
-  const handleCancel = () => {
+  async function handleEmailSending() {
+    try {
+        const result = await sendEmail(formFieldValues);
+        console.log('Email sent successfully:', result);
+        return result;
+    } catch (error) {
+        console.error('Error sending email:', error);
+    }
+  }
+
+  const handleCancel = async () => {
     setIsOpen(false);
     BookMeetingFormDialog.destroy({ isConfirmed: false });
   };
 
   const handleConfirm = async () => {
     await setIsConfirmed(true);
-  
     const fieldsNotEmpty = Object.values(fieldErrors).every(value => value !== '');
-  
     if (fieldsNotEmpty) {
-      setIsOpen(false);
-      BookMeetingFormDialog.destroy({ isConfirmed: true });
-    } else {
-      setIsOpen(true);
+      await handleEmailSending();
+      setTimeout(() => {
+        setIsOpen(false);
+        BookMeetingFormDialog.destroy({ isConfirmed: true });
+      }, 3000)
     }
   };
 
