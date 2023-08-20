@@ -9,11 +9,12 @@ let containerElement;
 
 const BookMeetingFormDialog = ({ render, isConfirmed }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const { fieldErrors, setIsConfirmed, formFieldValues } = React.useContext(JhcContext);
+  const [loading, setLoading] = useState(false);
+  const { fieldErrors, setIsConfirmed, formFieldValues, selectedProblemTitles } = React.useContext(JhcContext);
 
   async function handleEmailSending() {
     try {
-        const result = await sendEmail(formFieldValues);
+        const result = await sendEmail(formFieldValues, selectedProblemTitles);
         console.log('Email sent successfully:', result);
         return result;
     } catch (error) {
@@ -30,9 +31,11 @@ const BookMeetingFormDialog = ({ render, isConfirmed }) => {
     await setIsConfirmed(true);
     const fieldsNotEmpty = Object.values(fieldErrors).every(value => value !== '');
     if (fieldsNotEmpty) {
+      setLoading(true);
       await handleEmailSending();
       setTimeout(() => {
         setIsOpen(false);
+        setLoading(false);
         BookMeetingFormDialog.destroy({ isConfirmed: true });
       }, 3000)
     }

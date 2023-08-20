@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { createContext, useState } from 'react';
 import { useLocalStorageState } from '../components/queries/LocalStorage';
+import { OrganizationProblems } from '../constants/Constants';
 
 export const JhcContext = createContext();
 
@@ -20,6 +21,9 @@ const JhcContextProvider = ({ children }) => {
     emailAddress: formFieldValues.emailAddress,
     companyName: formFieldValues.companyName,
   });
+
+  const selectedProblemTitles = OrganizationProblems.filter(problem => selectedProblemsStorage.includes(problem.key))
+    .map(problem => problem.title);
 
   function handleOnClickServices(item) {
     const selectedIndex = selectedProblems.indexOf(item.key);
@@ -59,7 +63,8 @@ const JhcContextProvider = ({ children }) => {
         setFieldErrors,
         fieldErrors,
         setIsConfirmed,
-        isConfirmed
+        isConfirmed,
+        selectedProblemTitles
       }}
     >
       {children}

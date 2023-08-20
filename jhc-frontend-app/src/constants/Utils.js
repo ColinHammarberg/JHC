@@ -6,12 +6,14 @@ export function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-  export const sendEmail = (formFieldValues) => {
-    console.log('formFieldValues', formFieldValues);
+  export const sendEmail = (formFieldValues, selectedProblemTitles) => {
     const emailParams = {
       to_email: 'colin.hammarberg2@gmail.com',
       subject: 'subject',
-      message: `Name: ${formFieldValues.firstName + ' ' + formFieldValues.lastName} Email address: ${formFieldValues.emailAddress} Company: ${formFieldValues.companyName} Requested service:`,
+      message: 
+        `Name: ${formFieldValues.firstName + ' ' + formFieldValues.lastName} 
+        Email address: ${formFieldValues.emailAddress} 
+        Company: ${formFieldValues.companyName} Requested service: ${selectedProblemTitles}`,
     };
   
     emailjs.send('service_58k15kk', 'template_kuvwbzb', emailParams, 'hJYoW8PqYe75LFRVU')

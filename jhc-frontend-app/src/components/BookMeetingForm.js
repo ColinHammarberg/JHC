@@ -1,14 +1,9 @@
 import React from 'react';
 import { Box, TextField } from '@mui/material';
-import { useLocalStorageState } from './queries/LocalStorage';
-import { OrganizationProblems } from '../constants/Constants';
 import { JhcContext } from '../context/JhcContext';
 
-const BookMeetingForm = (props) => {
-    const [selectedProblemsStorage] = useLocalStorageState('selectedProblemsStorage', []);
-    const { handleOnChange, formFieldValues, fieldErrors, isConfirmed } = React.useContext(JhcContext);
-    const selectedProblemTitles = OrganizationProblems.filter(problem => selectedProblemsStorage.includes(problem.key))
-    .map(problem => problem.title);
+const BookMeetingForm = () => {
+    const { handleOnChange, formFieldValues, fieldErrors, isConfirmed, selectedProblemTitles } = React.useContext(JhcContext);
     return (
         <Box className="form">
             <Box className="title">Enter contact details</Box>
