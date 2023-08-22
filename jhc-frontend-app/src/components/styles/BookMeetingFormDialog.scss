@@ -1,3 +1,5 @@
+@import './utils/ResponsiveUtils.scss';
+
 .responsive-dialog {
     width: 600px;
     margin: auto;
@@ -106,6 +108,15 @@
                     text-align: center;
                 }
             }
+        }
+    }
+}
+
+@include media(phone) {
+    .responsive-dialog {
+        width: 350px;
+        .MuiPaper-root {
+            margin: auto;
         }
     }
 }
