@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+// import LoopIcon from '@mui/icons-material/Loop';
 import { Avatar } from './Avatar';
 import './styles/Services.scss';
 import { ProblemAreas } from './ProblemAreas';
@@ -11,19 +12,17 @@ import { Box, Button, Dialog, DialogContent } from '@mui/material';
 import BookMeetingForm from './BookMeetingForm';
 
 export const Services = () => {
-    const { selectedProblems, formFieldValues, setFieldErrors } = useContext(JhcContext);
+    const { selectedProblems, formFieldValues, setFieldErrors, loading } = useContext(JhcContext);
     // const [isLoading, setIsLoading] = useState(false);
 
     async function handleOnBookMeeting() {
         if (selectedProblems.length > 0) {
-          // Calculate newErrors object based on your validation logic
           const newErrors = {
             firstName: !formFieldValues.firstName,
             lastName: !formFieldValues.lastName,
             emailAddress: !formFieldValues.emailAddress,
             companyName: !formFieldValues.companyName,
-        };
-        
+        };        
         setFieldErrors(newErrors);
         const { isConfirmed } = await BookMeetingFormDialog.show((renderDialog) => (
             renderDialog({
@@ -36,6 +35,7 @@ export const Services = () => {
                 >
                   <DialogContent className="dialog-content styled-scrollbar">
                     <BookMeetingForm />
+                    {/* {loading && <LoopIcon />} */}
                     <Box className="action-btn">
                       <Button onClick={handleConfirm} className="btn confirm">Request</Button>
                       <Button onClick={handleCancel} className="btn cancel">Discard</Button>
@@ -50,8 +50,6 @@ export const Services = () => {
           }
         }
       }
-      
-      
 
     return (
         <div className="problem-utilization">

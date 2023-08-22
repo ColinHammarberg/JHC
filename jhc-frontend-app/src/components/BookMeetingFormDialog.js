@@ -9,8 +9,7 @@ let containerElement;
 
 const BookMeetingFormDialog = ({ render, isConfirmed }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [loading, setLoading] = useState(false);
-  const { fieldErrors, setIsConfirmed, formFieldValues, selectedProblemTitles } = React.useContext(JhcContext);
+  const { fieldErrors, setIsConfirmed, formFieldValues, selectedProblemTitles, setLoading } = React.useContext(JhcContext);
 
   async function handleEmailSending() {
     try {
@@ -34,9 +33,9 @@ const BookMeetingFormDialog = ({ render, isConfirmed }) => {
       setLoading(true);
       await handleEmailSending();
       setTimeout(() => {
-        setIsOpen(false);
-        setLoading(false);
-        BookMeetingFormDialog.destroy({ isConfirmed: true });
+        // setIsOpen(false);
+        // setLoading(false);
+        // BookMeetingFormDialog.destroy({ isConfirmed: true });
       }, 3000)
     }
   };
@@ -48,7 +47,7 @@ const BookMeetingFormDialog = ({ render, isConfirmed }) => {
   return render({
     handleConfirm,
     handleCancel,
-    isConfirmed
+    isConfirmed,
   });
 };
 

@@ -9,6 +9,7 @@ const JhcContextProvider = ({ children }) => {
   const [selectedProblemsStorage, setSelectedProblemsStorage] = useLocalStorageState('selectedProblemsStorage', []);
   const [selectedProblems, setSelectedProblems] = useState([]);
   const [isConfirmed, setIsConfirmed] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [formFieldValues, setFormFieldValues] = useState({
     firstName: '',
     lastName: '',
@@ -64,7 +65,9 @@ const JhcContextProvider = ({ children }) => {
         fieldErrors,
         setIsConfirmed,
         isConfirmed,
-        selectedProblemTitles
+        selectedProblemTitles,
+        loading,
+        setLoading
       }}
     >
       {children}
