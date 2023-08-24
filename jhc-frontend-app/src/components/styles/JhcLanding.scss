@@ -73,20 +73,29 @@
         img {
             height: 710px;
             width: 690px;
-            position: absolute;
-            bottom: 0;
+            position: absolute ;
+            bottom: 0 ;
         }
     }
+
+    // .count-down {
+    //     font-family: 'MediumLLWeb-Regular';
+    //     color: #fff;
+
+    //     span {
+    //         color: #D381F5;
+    //         font-family: 'MediumLLWeb-Bold';
+    //         font-size: 20px;
+    //     }
+    // }
 }
 
 @include media(phone) {
     .home-container {
         .content-left {
-            height: 500px;
+            height: 600px;
             justify-content: center;
-            margin-top: unset;
             position: relative;
-            min-height: unset;
 
             img {
                 height: 450px;
