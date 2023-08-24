@@ -77,17 +77,6 @@
             bottom: 0;
         }
     }
-
-    // .count-down {
-    //     font-family: 'MediumLLWeb-Regular';
-    //     color: #fff;
-
-    //     span {
-    //         color: #D381F5;
-    //         font-family: 'MediumLLWeb-Bold';
-    //         font-size: 20px;
-    //     }
-    // }
 }
 
 @include media(phone) {
@@ -97,6 +86,7 @@
             justify-content: center;
             margin-top: unset;
             position: relative;
+            min-height: unset;
 
             img {
                 height: 450px;
