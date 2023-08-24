@@ -73,8 +73,8 @@
         img {
             height: 710px;
             width: 690px;
-            position: absolute ;
-            bottom: 0 ;
+            position: absolute;
+            bottom: 0;
         }
     }
 
@@ -93,8 +93,9 @@
 @include media(phone) {
     .home-container {
         .content-left {
-            height: 600px;
+            height: 500px;
             justify-content: center;
+            margin-top: unset;
             position: relative;
 
             img {

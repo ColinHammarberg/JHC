@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, TextField } from '@mui/material';
 import { JhcContext } from '../context/JhcContext';
+import { isValidEmail } from '../constants/Utils';
 
 const BookMeetingForm = () => {
     const { handleOnChange, formFieldValues, fieldErrors, isConfirmed, selectedProblemTitles } = React.useContext(JhcContext);
@@ -22,7 +23,7 @@ const BookMeetingForm = () => {
                     <Box className="content">
                         <TextField
                             onChange={(event) => handleOnChange(event, 'lastName')} 
-                            label="last name" 
+                            label="last name"
                             value={formFieldValues.lastName}
                             error={isConfirmed && fieldErrors.lastName === ''}
                             helperText={isConfirmed && fieldErrors.lastName === '' ? 'This field is required' : ''}
@@ -35,7 +36,7 @@ const BookMeetingForm = () => {
                         onChange={(event) => handleOnChange(event, 'emailAddress')} 
                         label="email address"
                         value={formFieldValues.emailAddress}
-                        error={isConfirmed && fieldErrors.emailAddress === ''}
+                        error={isConfirmed && fieldErrors.emailAddress === '' || isConfirmed && !isValidEmail(formFieldValues.emailAddress)}
                         helperText={isConfirmed && fieldErrors.emailAddress === '' ? 'This field is required' : ''}
                         required
                     />
