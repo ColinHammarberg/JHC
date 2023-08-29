@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import { isMobile } from 'react-device-detect';
 import { Avatar } from './Avatar';
 import './styles/Welcome.scss';
 import { ShowcaseCompany } from './ShowcaseCompany';
@@ -17,12 +16,14 @@ import Image from '../images/Jonas-4.png';
 import { ScrollButton } from './ScrollButton';
 import SpceLanding from './SpceLanding';
 import JonasInAction from '../images/Jonas-in-action.png';
+import useMobileQuery from './queries/useMobileQuery';
 
 export const Welcome = () => {
   const targetRef = useRef(null);
   const [showSpceLanding, setShowSpceLanding] = useState(false);
   const [scrolledUp, setScrolledUp] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { isMobile } = useMobileQuery();
 
   useEffect(() => {
     const handleScroll = () => {

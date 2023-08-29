@@ -29,12 +29,14 @@ function JhcLanding() {
 
   return (
     <div className={`home-container ${showBackgroundTransition ? ' transition' : ''}`}>
-      <div className="header-container">
-        <Header jhcLanding />
-      </div>
-        <div className="content-left">
-          <img src={JonasInAction} alt=""/>
-        </div>
+      <Header jhcLanding />
+        <>
+          <div className="content">
+            <div className="content-left">
+              <img src={JonasInAction} alt="" />
+            </div>
+          </div>
+        </>
     </div>
   );
 }
