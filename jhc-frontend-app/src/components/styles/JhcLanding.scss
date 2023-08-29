@@ -80,6 +80,7 @@
 
 @include media(phone) {
     .home-container {
+        height: unset;
         .content {
 
             .content-left {
